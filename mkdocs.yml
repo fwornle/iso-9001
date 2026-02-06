@@ -1,0 +1,95 @@
+site_name: ISO 9001:2015 Audit Preparation
+site_description: Comprehensive audit preparation package for ISO 9001:2015 certification - DDD Unit (Data Driven Development | AD/ADAS Tooling)
+site_url: https://example.com/iso-9001
+repo_url: https://github.com/yourusername/iso-9001
+repo_name: yourusername/iso-9001
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Audit Catalogue: getting-started/audit-catalogue.md
+    - Process Map: getting-started/process-map.md
+    - Preparation Checklist: getting-started/preparation-checklist.md
+  - QMS Framework (Clauses 4-5):
+    - Context Analysis: qms-framework/context-analysis.md
+    - Stakeholder Register: qms-framework/stakeholder-register.md
+    - QMS Scope: qms-framework/qms-scope.md
+    - Quality Policy: qms-framework/quality-policy.md
+    - RACI Matrix: qms-framework/raci-matrix.md
+  - Planning (Clause 6):
+    - Risk Register: planning/risk-register.md
+    - Quality Objectives: planning/quality-objectives.md
+  - Support (Clause 7):
+    - Competency Matrix: support/competency-matrix.md
+    - Communication Matrix: support/communication-matrix.md
+  - Operations (Clause 8):
+    - Supplier Evaluation: operations/supplier-evaluation.md
+  - Performance (Clause 9):
+    - Internal Audit Program: performance/internal-audit-program.md
+    - Management Review: performance/management-review.md
+  - Improvement (Clause 10):
+    - CAPA Log: improvement/capa-log.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/iso-9001
