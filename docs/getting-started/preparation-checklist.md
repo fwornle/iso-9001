@@ -47,20 +47,20 @@ gantt
 
 | # | Document | Reference | Owner | Status | Review Date | Approved |
 |---|----------|-----------|-------|:------:|:-----------:|:--------:|
-| 1 | Context Analysis (SWOT/PESTLE) | [REF-01](reference-documents/REF-01-Context-Analysis.md) | Unit Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 2 | Stakeholder Register | [REF-02](reference-documents/REF-02-Stakeholder-Register.md) | PO / QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 3 | QMS Scope Statement | [REF-03](reference-documents/REF-03-QMS-Scope.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 4 | Quality Policy | [REF-04](reference-documents/REF-04-Quality-Policy.md) | Unit Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 5 | RACI Matrix | [REF-05](reference-documents/REF-05-RACI-Matrix.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 6 | Risk Register | [REF-06](reference-documents/REF-06-Risk-Register.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 7 | Quality Objectives | [REF-07](reference-documents/REF-07-Quality-Objectives.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 8 | Competency Matrix | [REF-08](reference-documents/REF-08-Competency-Matrix.md) | Team Leads | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 9 | Communication Matrix | [REF-09](reference-documents/REF-09-Communication-Matrix.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 10 | Supplier Evaluation | [REF-10](reference-documents/REF-10-Supplier-Evaluation.md) | Tech Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 11 | Internal Audit Program | [REF-11](reference-documents/REF-11-Internal-Audit-Program.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 12 | Management Review Template | [REF-12](reference-documents/REF-12-Management-Review-Template.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 13 | CAPA Log | [REF-13](reference-documents/REF-13-CAPA-Log.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
-| 14 | QMS Process Map | [QMS Process Map](QMS-Process-Map.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 1 | Context Analysis (SWOT/PESTLE) | [REF-01](../qms-framework/context-analysis.md) | Unit Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 2 | Stakeholder Register | [REF-02](../qms-framework/stakeholder-register.md) | PO / QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 3 | QMS Scope Statement | [REF-03](../qms-framework/qms-scope.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 4 | Quality Policy | [REF-04](../qms-framework/quality-policy.md) | Unit Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 5 | RACI Matrix | [REF-05](../qms-framework/raci-matrix.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 6 | Risk Register | [REF-06](../planning/risk-register.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 7 | Quality Objectives | [REF-07](../planning/quality-objectives.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 8 | Competency Matrix | [REF-08](../support/competency-matrix.md) | Team Leads | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 9 | Communication Matrix | [REF-09](../support/communication-matrix.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 10 | Supplier Evaluation | [REF-10](../operations/supplier-evaluation.md) | Tech Lead | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 11 | Internal Audit Program | [REF-11](../performance/internal-audit-program.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 12 | Management Review Template | [REF-12](../performance/management-review.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 13 | CAPA Log | [REF-13](../improvement/capa-log.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
+| 14 | QMS Process Map | [QMS Process Map](process-map.md) | QMR | ☐ Draft ☐ Review ☐ Final | | ☐ |
 
 ### Additional Documents Needed
 

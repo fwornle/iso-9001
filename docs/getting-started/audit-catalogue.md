@@ -69,7 +69,7 @@ graph LR
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 4.1.1 | **What does your unit do? Describe your scope.** | "We are the Data Driven Development (DDD) unit. We develop and maintain tooling for data engineering, storage, simulation, and reprocessing. Our customers are SW engineers working on Autonomous Driving and ADAS functions. We provide the infrastructure and tools that enable them to validate and develop perception, planning, and control algorithms using real-world and simulated driving data." |
-| 4.1.2 | **What are the key external and internal issues that affect your ability to achieve the intended outcomes of the QMS?** | **External:** Regulatory landscape for AD (UN R157, EU AI Act), semiconductor supply constraints, evolving sensor technology, OEM platform changes, cybersecurity requirements (ISO 21434). **Internal:** Rapid growth, cloud cost management, cross-team dependencies, talent retention in a competitive AD market, technical debt in legacy tooling. *Reference:* [Context Analysis (SWOT)](reference-documents/REF-01-Context-Analysis.md) |
+| 4.1.2 | **What are the key external and internal issues that affect your ability to achieve the intended outcomes of the QMS?** | **External:** Regulatory landscape for AD (UN R157, EU AI Act), semiconductor supply constraints, evolving sensor technology, OEM platform changes, cybersecurity requirements (ISO 21434). **Internal:** Rapid growth, cloud cost management, cross-team dependencies, talent retention in a competitive AD market, technical debt in legacy tooling. *Reference:* [Context Analysis (SWOT)](../qms-framework/context-analysis.md) |
 | 4.1.3 | **How do you monitor and review these issues?** | "We conduct quarterly context reviews as part of our management review cycle. External issues are tracked via our regulatory watch list and industry event participation. Internal issues surface through retrospectives, team health checks, and OKR reviews." |
 
 ### 4.2 Understanding the Needs and Expectations of Interested Parties
@@ -77,20 +77,20 @@ graph LR
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 4.2.1 | **Who are your interested parties?** | AD/ADAS SW engineers (primary customers), management (budget & strategy), regulatory bodies, data providers (fleet data owners), cloud infrastructure providers (AWS/Azure), partner OEM teams, works council, information security team. |
-| 4.2.2 | **How do you determine their requirements?** | "We maintain a stakeholder register. Requirements are captured through: regular syncs with AD teams (sprint reviews), SLAs with platform consumers, compliance requirements from InfoSec and legal, and feedback via our internal tooling portal." *Reference:* [Stakeholder Register](reference-documents/REF-02-Stakeholder-Register.md) |
+| 4.2.2 | **How do you determine their requirements?** | "We maintain a stakeholder register. Requirements are captured through: regular syncs with AD teams (sprint reviews), SLAs with platform consumers, compliance requirements from InfoSec and legal, and feedback via our internal tooling portal." *Reference:* [Stakeholder Register](../qms-framework/stakeholder-register.md) |
 
 ### 4.3 Scope of the QMS
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 4.3.1 | **What is the scope of your QMS?** | "Design, development, deployment, and maintenance of data engineering tools, simulation environments, data storage solutions, and reprocessing pipelines for Autonomous Driving and ADAS software validation. This includes CI/CD toolchains, data cataloguing, simulation-as-a-service, and large-scale data replay infrastructure." |
-| 4.3.2 | **Are any clauses excluded?** | "We do not manufacture physical products, so aspects of Clause 8 related to production, delivery of physical goods, and post-delivery activities for hardware do not apply. We have documented this exclusion with justification." *Reference:* [QMS Scope Statement](reference-documents/REF-03-QMS-Scope.md) |
+| 4.3.2 | **Are any clauses excluded?** | "We do not manufacture physical products, so aspects of Clause 8 related to production, delivery of physical goods, and post-delivery activities for hardware do not apply. We have documented this exclusion with justification." *Reference:* [QMS Scope Statement](../qms-framework/qms-scope.md) |
 
 ### 4.4 QMS and Its Processes
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 4.4.1 | **Can you show me your process landscape / process map?** | "Yes — here is our process map showing our core, management, and support processes." *Reference:* [QMS Process Map](QMS-Process-Map.md) |
+| 4.4.1 | **Can you show me your process landscape / process map?** | "Yes — here is our process map showing our core, management, and support processes." *Reference:* [QMS Process Map](process-map.md) |
 | 4.4.2 | **How do you determine inputs, outputs, sequence, and interaction of processes?** | "Each process has a documented process description with defined inputs, outputs, responsible roles, KPIs, and interfaces. These are maintained in our Confluence space and reviewed annually." |
 
 ```mermaid
@@ -154,7 +154,7 @@ graph TB
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 5.2.1 | **Can you show me your quality policy?** | *Have this printed and posted.* "Our quality policy commits us to delivering reliable, scalable, and secure tooling that enables our AD/ADAS engineers to validate autonomous driving functions with confidence. We commit to continual improvement, compliance with applicable requirements, and data-driven decision-making." *Reference:* [Quality Policy](reference-documents/REF-04-Quality-Policy.md) |
+| 5.2.1 | **Can you show me your quality policy?** | *Have this printed and posted.* "Our quality policy commits us to delivering reliable, scalable, and secure tooling that enables our AD/ADAS engineers to validate autonomous driving functions with confidence. We commit to continual improvement, compliance with applicable requirements, and data-driven decision-making." *Reference:* [Quality Policy](../qms-framework/quality-policy.md) |
 | 5.2.2 | **How is the quality policy communicated?** | "It's posted on our Confluence landing page, included in onboarding materials, referenced in sprint retrospectives, and displayed in our team area. All team members have acknowledged it." |
 
 ### 5.3 Roles, Responsibilities, and Authorities
@@ -162,7 +162,7 @@ graph TB
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 5.3.1 | **Who is responsible for the QMS?** | "Our Quality Management Representative is [Name], who reports directly to the unit lead. Day-to-day quality is owned by each team's quality champion. The QMR coordinates audits, manages the document system, and reports on QMS performance." |
-| 5.3.2 | **How are roles and responsibilities defined?** | "Through our RACI matrix, job descriptions, and team charters. These are documented in Confluence and reviewed during management reviews." *Reference:* [RACI Matrix](reference-documents/REF-05-RACI-Matrix.md) |
+| 5.3.2 | **How are roles and responsibilities defined?** | "Through our RACI matrix, job descriptions, and team charters. These are documented in Confluence and reviewed during management reviews." *Reference:* [RACI Matrix](../qms-framework/raci-matrix.md) |
 
 ---
 
@@ -172,7 +172,7 @@ graph TB
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 6.1.1 | **How do you identify and manage risks?** | "We maintain a risk register that is reviewed quarterly. Risks are categorized by likelihood and impact using a 5×5 matrix. Each risk has an owner, mitigation actions, and a target date. We use FMEA for critical tool components." *Reference:* [Risk Register](reference-documents/REF-06-Risk-Register.md) |
+| 6.1.1 | **How do you identify and manage risks?** | "We maintain a risk register that is reviewed quarterly. Risks are categorized by likelihood and impact using a 5×5 matrix. Each risk has an owner, mitigation actions, and a target date. We use FMEA for critical tool components." *Reference:* [Risk Register](../planning/risk-register.md) |
 | 6.1.2 | **Can you give me an example of a risk you identified and how you addressed it?** | *Be prepared with 2-3 concrete examples, e.g.:* "We identified that a single-point-of-failure in our data ingestion pipeline could halt reprocessing for all AD teams. We implemented redundant ingestion paths and automated failover, reducing potential downtime from hours to minutes." |
 | 6.1.3 | **How do you identify opportunities?** | "Through retrospectives, customer feedback sessions, technology radar reviews, and benchmarking against industry best practices. Opportunities are captured in our backlog and prioritized in OKR planning." |
 
@@ -198,7 +198,7 @@ graph LR
 |---|--------------------------|---------------|
 | 6.2.1 | **What are your quality objectives?** | "Our quality objectives are aligned with our OKRs and include: (1) Tool availability ≥ 99.5%, (2) Mean time to resolve critical bugs < 4h, (3) Customer satisfaction (NPS) ≥ 40, (4) Zero data integrity incidents in reprocessing pipelines, (5) 100% of releases pass automated regression suite." |
 | 6.2.2 | **How do you measure progress toward these objectives?** | "Each objective has a defined KPI, measurement method, frequency, and owner. We track them on our Grafana dashboards and review them monthly in team leads meeting and quarterly in management review." |
-| 6.2.3 | **Are quality objectives consistent with the quality policy?** | "Yes — our policy commits to reliability, security, and data-driven improvement. Each objective directly maps to one of these commitments. We maintain a traceability matrix." *Reference:* [Quality Objectives](reference-documents/REF-07-Quality-Objectives.md) |
+| 6.2.3 | **Are quality objectives consistent with the quality policy?** | "Yes — our policy commits to reliability, security, and data-driven improvement. Each objective directly maps to one of these commitments. We maintain a traceability matrix." *Reference:* [Quality Objectives](../planning/quality-objectives.md) |
 
 ### 6.3 Planning of Changes
 
@@ -222,7 +222,7 @@ graph LR
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 7.2.1 | **How do you determine required competencies?** | "Each role has a competency profile defining required technical skills (e.g., Python, cloud architecture, data engineering), domain knowledge (AD/ADAS), and soft skills. These are documented in our competency matrix." *Reference:* [Competency Matrix](reference-documents/REF-08-Competency-Matrix.md) |
+| 7.2.1 | **How do you determine required competencies?** | "Each role has a competency profile defining required technical skills (e.g., Python, cloud architecture, data engineering), domain knowledge (AD/ADAS), and soft skills. These are documented in our competency matrix." *Reference:* [Competency Matrix](../support/competency-matrix.md) |
 | 7.2.2 | **How do you ensure people are competent?** | "Through structured onboarding (30-60-90 day plan), regular 1:1s with skill assessments, annual development plans, internal tech talks, conference attendance, and mandatory training for critical processes." |
 | 7.2.3 | **How do you maintain records of competence?** | "Training records are maintained in our HR system (SuccessFactors). Technical certifications are tracked in our team wiki. Onboarding completion is signed off by team leads." |
 
@@ -236,7 +236,7 @@ graph LR
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 7.4.1 | **How do you determine internal and external communications related to the QMS?** | "We have a defined communication matrix covering what is communicated, when, to whom, and how. Internal: daily standups, sprint reviews, retrospectives, management reviews. External: release notes, SLA reports, incident notifications to consuming teams." *Reference:* [Communication Matrix](reference-documents/REF-09-Communication-Matrix.md) |
+| 7.4.1 | **How do you determine internal and external communications related to the QMS?** | "We have a defined communication matrix covering what is communicated, when, to whom, and how. Internal: daily standups, sprint reviews, retrospectives, management reviews. External: release notes, SLA reports, incident notifications to consuming teams." *Reference:* [Communication Matrix](../support/communication-matrix.md) |
 
 ### 7.5 Documented Information
 
@@ -325,7 +325,7 @@ graph LR
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 8.4.1 | **How do you evaluate and select external providers?** | "Cloud providers are selected per BMW Group procurement. For additional tools/libraries, we evaluate based on: security posture, license compatibility, community health, performance benchmarks, and BMW InfoSec approval. We maintain an approved vendor/tool list." |
-| 8.4.2 | **How do you ensure externally provided products/services meet requirements?** | "SLAs define performance expectations. We monitor cloud service health dashboards. Open-source dependencies are scanned for vulnerabilities (Snyk/Dependabot). Vendor performance is reviewed quarterly." *Reference:* [Supplier Evaluation](reference-documents/REF-10-Supplier-Evaluation.md) |
+| 8.4.2 | **How do you ensure externally provided products/services meet requirements?** | "SLAs define performance expectations. We monitor cloud service health dashboards. Open-source dependencies are scanned for vulnerabilities (Snyk/Dependabot). Vendor performance is reviewed quarterly." *Reference:* [Supplier Evaluation](../operations/supplier-evaluation.md) |
 
 ### 8.5 Production and Service Provision
 
@@ -389,7 +389,7 @@ graph TB
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 9.2.1 | **Do you conduct internal audits?** | "Yes. We have an annual internal audit program. Audits are conducted by trained internal auditors who are independent of the area being audited. Results are documented and reported in management review." *Reference:* [Internal Audit Program](reference-documents/REF-11-Internal-Audit-Program.md) |
+| 9.2.1 | **Do you conduct internal audits?** | "Yes. We have an annual internal audit program. Audits are conducted by trained internal auditors who are independent of the area being audited. Results are documented and reported in management review." *Reference:* [Internal Audit Program](../performance/internal-audit-program.md) |
 | 9.2.2 | **How do you select auditors and ensure objectivity?** | "Auditors are trained in ISO 9001 auditing. They do not audit their own work. We rotate auditors and may use auditors from other BMW Group units to ensure independence." |
 | 9.2.3 | **Can you show me internal audit records?** | *Have recent internal audit reports, findings, and corrective action records ready.* |
 
@@ -399,7 +399,7 @@ graph TB
 |---|--------------------------|---------------|
 | 9.3.1 | **How often do you conduct management reviews?** | "Quarterly, with a comprehensive annual review. Ad-hoc reviews are triggered by significant events (major incidents, organizational changes)." |
 | 9.3.2 | **What topics are covered in management review?** | "Status of actions from previous reviews, changes in context/interested parties, QMS performance (KPIs), audit results, customer feedback, nonconformities and corrective actions, risk register updates, resource adequacy, and improvement opportunities." |
-| 9.3.3 | **What are the outputs of management reviews?** | "Decisions on improvement actions, resource allocation changes, QMS scope adjustments, updated quality objectives, and action items with owners and deadlines. All are documented in meeting minutes." *Reference:* [Management Review Template](reference-documents/REF-12-Management-Review-Template.md) |
+| 9.3.3 | **What are the outputs of management reviews?** | "Decisions on improvement actions, resource allocation changes, QMS scope adjustments, updated quality objectives, and action items with owners and deadlines. All are documented in meeting minutes." *Reference:* [Management Review Template](../performance/management-review.md) |
 
 ---
 
@@ -416,7 +416,7 @@ graph TB
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 10.2.1 | **How do you handle nonconformities?** | "When a nonconformity is identified (audit finding, customer complaint, incident), we: (1) contain the immediate impact, (2) investigate root cause (5-Why, Fishbone), (3) implement corrective action, (4) verify effectiveness, (5) update risk register if needed, (6) share lessons learned." |
-| 10.2.2 | **Can you show me your corrective action records?** | *Have 3-5 recent CAPA records ready showing the full cycle from identification to effectiveness verification.* *Reference:* [CAPA Log](reference-documents/REF-13-CAPA-Log.md) |
+| 10.2.2 | **Can you show me your corrective action records?** | *Have 3-5 recent CAPA records ready showing the full cycle from identification to effectiveness verification.* *Reference:* [CAPA Log](../improvement/capa-log.md) |
 | 10.2.3 | **How do you verify that corrective actions are effective?** | "Each CAPA has a defined effectiveness check — typically a follow-up measurement at 30/60/90 days. The QMR reviews open CAPAs monthly. Recurring issues trigger process changes, not just fixes." |
 
 ```mermaid
@@ -502,21 +502,21 @@ graph TD
 
 | Document | Reference | Status |
 |----------|-----------|--------|
-| Context Analysis (SWOT) | [REF-01](reference-documents/REF-01-Context-Analysis.md) | ☐ Ready |
-| Stakeholder Register | [REF-02](reference-documents/REF-02-Stakeholder-Register.md) | ☐ Ready |
-| QMS Scope Statement | [REF-03](reference-documents/REF-03-QMS-Scope.md) | ☐ Ready |
-| Quality Policy | [REF-04](reference-documents/REF-04-Quality-Policy.md) | ☐ Ready |
-| RACI Matrix | [REF-05](reference-documents/REF-05-RACI-Matrix.md) | ☐ Ready |
-| Risk Register | [REF-06](reference-documents/REF-06-Risk-Register.md) | ☐ Ready |
-| Quality Objectives | [REF-07](reference-documents/REF-07-Quality-Objectives.md) | ☐ Ready |
-| Competency Matrix | [REF-08](reference-documents/REF-08-Competency-Matrix.md) | ☐ Ready |
-| Communication Matrix | [REF-09](reference-documents/REF-09-Communication-Matrix.md) | ☐ Ready |
-| Supplier Evaluation | [REF-10](reference-documents/REF-10-Supplier-Evaluation.md) | ☐ Ready |
-| Internal Audit Program | [REF-11](reference-documents/REF-11-Internal-Audit-Program.md) | ☐ Ready |
-| Management Review Template | [REF-12](reference-documents/REF-12-Management-Review-Template.md) | ☐ Ready |
-| CAPA Log | [REF-13](reference-documents/REF-13-CAPA-Log.md) | ☐ Ready |
-| QMS Process Map | [QMS Process Map](QMS-Process-Map.md) | ☐ Ready |
-| Audit Preparation Checklist | [Checklist](Audit-Preparation-Checklist.md) | ☐ Ready |
+| Context Analysis (SWOT) | [REF-01](../qms-framework/context-analysis.md) | ☐ Ready |
+| Stakeholder Register | [REF-02](../qms-framework/stakeholder-register.md) | ☐ Ready |
+| QMS Scope Statement | [REF-03](../qms-framework/qms-scope.md) | ☐ Ready |
+| Quality Policy | [REF-04](../qms-framework/quality-policy.md) | ☐ Ready |
+| RACI Matrix | [REF-05](../qms-framework/raci-matrix.md) | ☐ Ready |
+| Risk Register | [REF-06](../planning/risk-register.md) | ☐ Ready |
+| Quality Objectives | [REF-07](../planning/quality-objectives.md) | ☐ Ready |
+| Competency Matrix | [REF-08](../support/competency-matrix.md) | ☐ Ready |
+| Communication Matrix | [REF-09](../support/communication-matrix.md) | ☐ Ready |
+| Supplier Evaluation | [REF-10](../operations/supplier-evaluation.md) | ☐ Ready |
+| Internal Audit Program | [REF-11](../performance/internal-audit-program.md) | ☐ Ready |
+| Management Review Template | [REF-12](../performance/management-review.md) | ☐ Ready |
+| CAPA Log | [REF-13](../improvement/capa-log.md) | ☐ Ready |
+| QMS Process Map | [QMS Process Map](process-map.md) | ☐ Ready |
+| Audit Preparation Checklist | [Checklist](preparation-checklist.md) | ☐ Ready |
 
 ---
 

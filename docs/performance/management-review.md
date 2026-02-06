@@ -36,7 +36,7 @@
 | _[Issue]_ | Internal / External | _[What changed]_ | _[Impact]_ | _[Action]_ |
 | | | | | |
 
-**Reference:** [REF-01 Context Analysis](REF-01-Context-Analysis.md)
+**Reference:** [REF-01 Context Analysis](../qms-framework/context-analysis.md)
 
 ### 3. QMS Performance and Effectiveness
 
@@ -60,7 +60,7 @@
 | QO-6: Test Coverage | Coverage % | _[%]_ | _[%]_ | ≥ 80% | 🟢🟡🔴 |
 | QO-7: Training | Completion % | _[%]_ | _[%]_ | ≥ 90% | 🟢🟡🔴 |
 
-**Reference:** [REF-07 Quality Objectives](REF-07-Quality-Objectives.md)
+**Reference:** [REF-07 Quality Objectives](../planning/quality-objectives.md)
 
 #### 3c. Process Performance
 
@@ -78,7 +78,7 @@
 |:------:|-------------|------------|-------------|:------:|:----------:|
 | CA-_[#]_ | _[Description]_ | _[Root cause]_ | _[Action]_ | ☐ Open / ✅ Closed | ☐ Yes / ☐ No |
 
-**Reference:** [REF-13 CAPA Log](REF-13-CAPA-Log.md)
+**Reference:** [REF-13 CAPA Log](../improvement/capa-log.md)
 
 #### 3e. Internal Audit Results
 
@@ -86,7 +86,7 @@
 |:-------:|-------|:----:|:---------:|:---------:|:------------:|:------:|
 | A-_[#]_ | _[Clauses]_ | _[Date]_ | _[#]_ | _[#]_ | _[#]_ | _[Status]_ |
 
-**Reference:** [REF-11 Internal Audit Program](REF-11-Internal-Audit-Program.md)
+**Reference:** [REF-11 Internal Audit Program](internal-audit-program.md)
 
 ### 4. Adequacy of Resources
 
@@ -104,7 +104,7 @@
 | _[Risk from REF-06]_ | _[#]_ | _[Status]_ | ↑↓→ |
 | | | | |
 
-**Reference:** [REF-06 Risk Register](REF-06-Risk-Register.md)
+**Reference:** [REF-06 Risk Register](../planning/risk-register.md)
 
 ### 6. Opportunities for Improvement
 

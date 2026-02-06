@@ -37,6 +37,41 @@ theme:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch
+          build: true
+          nav:
+            - Startseite: index.md
+            - Erste Schritte:
+              - Auditkatalog: getting-started/audit-catalogue.md
+              - Prozesslandkarte: getting-started/process-map.md
+              - Vorbereitungs-Checkliste: getting-started/preparation-checklist.md
+            - QMS-Rahmenwerk (Abschnitte 4-5):
+              - Kontextanalyse: qms-framework/context-analysis.md
+              - Stakeholder-Register: qms-framework/stakeholder-register.md
+              - QMS-Geltungsbereich: qms-framework/qms-scope.md
+              - Qualitätspolitik: qms-framework/quality-policy.md
+              - RACI-Matrix: qms-framework/raci-matrix.md
+            - Planung (Abschnitt 6):
+              - Risikoregister: planning/risk-register.md
+              - Qualitätsziele: planning/quality-objectives.md
+            - Unterstützung (Abschnitt 7):
+              - Kompetenzmatrix: support/competency-matrix.md
+              - Kommunikationsmatrix: support/communication-matrix.md
+            - Betrieb (Abschnitt 8):
+              - Lieferantenbewertung: operations/supplier-evaluation.md
+            - Leistungsbewertung (Abschnitt 9):
+              - Internes Auditprogramm: performance/internal-audit-program.md
+              - Managementbewertung: performance/management-review.md
+            - Verbesserung (Abschnitt 10):
+              - CAPA-Protokoll: improvement/capa-log.md
   - minify:
       minify_html: true
 
@@ -90,6 +125,13 @@ nav:
     - CAPA Log: improvement/capa-log.md
 
 extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/yourusername/iso-9001
