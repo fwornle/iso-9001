@@ -1,6 +1,6 @@
 site_name: ISO 9001:2015 Audit Preparation
 site_description: Comprehensive audit preparation package for ISO 9001:2015 certification - DDD Unit (Data Driven Development | AD/ADAS Tooling)
-site_url: https://example.com/iso-9001
+site_url: ""
 repo_url: https://github.com/yourusername/iso-9001
 repo_name: yourusername/iso-9001
 
@@ -125,13 +125,6 @@ nav:
     - CAPA Log: improvement/capa-log.md
 
 extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Deutsch
-      link: /de/
-      lang: de
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/yourusername/iso-9001
