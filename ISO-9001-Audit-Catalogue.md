@@ -244,7 +244,7 @@ graph LR
 |---|--------------------------|---------------|
 | 7.5.1 | **How do you control documented information required by the QMS?** | "All QMS documents are maintained in Confluence with version control, approval workflows, and access controls. Code and configuration are in Git (GitHub/GitLab) with branch protection and code review requirements. We distinguish between controlled documents (policies, procedures) and records (evidence of activities)." |
 | 7.5.2 | **How do you ensure documents are current and available?** | "Confluence spaces have designated owners who review content quarterly. Outdated pages are flagged by an automated staleness check. Git repositories use branch protection to prevent unauthorized changes. We have a document retention policy." |
-| 7.5.3 | **How do you protect documented information?** | "Access is controlled through AD group policies. Sensitive data is classified and handled per our information classification scheme. Backups are automated. We comply with BMW Group information security policies." |
+| 7.5.3 | **How do you protect documented information?** | "Access is controlled through AD group policies. Sensitive data is classified and handled per our information classification scheme. Backups are automated. We comply with organizational information security policies." |
 
 ```mermaid
 graph TD
@@ -324,7 +324,7 @@ graph LR
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| 8.4.1 | **How do you evaluate and select external providers?** | "Cloud providers are selected per BMW Group procurement. For additional tools/libraries, we evaluate based on: security posture, license compatibility, community health, performance benchmarks, and BMW InfoSec approval. We maintain an approved vendor/tool list." |
+| 8.4.1 | **How do you evaluate and select external providers?** | "Cloud providers are selected per corporate procurement. For additional tools/libraries, we evaluate based on: security posture, license compatibility, community health, performance benchmarks, and corporate InfoSec approval. We maintain an approved vendor/tool list." |
 | 8.4.2 | **How do you ensure externally provided products/services meet requirements?** | "SLAs define performance expectations. We monitor cloud service health dashboards. Open-source dependencies are scanned for vulnerabilities (Snyk/Dependabot). Vendor performance is reviewed quarterly." *Reference:* [Supplier Evaluation](reference-documents/REF-10-Supplier-Evaluation.md) |
 
 ### 8.5 Production and Service Provision
@@ -333,7 +333,7 @@ graph LR
 |---|--------------------------|---------------|
 | 8.5.1 | **How do you control production/service provision?** | "Our tools are deployed via automated CI/CD pipelines with: Infrastructure-as-Code, immutable deployments, automated rollback capabilities, feature flags for controlled rollouts, and 24/7 monitoring with alerting." |
 | 8.5.2 | **How do you ensure traceability?** | "Every deployment is traceable to: Git commit → PR → Jira ticket → requirement. We maintain audit logs for all data pipeline operations. Data lineage is tracked for reprocessing workflows." |
-| 8.5.3 | **How do you handle customer property (data)?** | "Driving data from fleet vehicles is treated as sensitive asset. We follow BMW Group data classification. Access is role-based (RBAC). Data retention follows legal requirements. We do not modify source data — reprocessing creates new derived datasets with full lineage." |
+| 8.5.3 | **How do you handle customer property (data)?** | "Driving data from fleet vehicles is treated as sensitive asset. We follow organizational data classification. Access is role-based (RBAC). Data retention follows legal requirements. We do not modify source data — reprocessing creates new derived datasets with full lineage." |
 | 8.5.4 | **How do you preserve outputs?** | "Artifacts are stored in versioned registries (Docker images, Python packages). Data is stored in redundant, backed-up storage (S3 with versioning). Configuration is version-controlled in Git." |
 
 ### 8.7 Control of Nonconforming Outputs
@@ -390,7 +390,7 @@ graph TB
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
 | 9.2.1 | **Do you conduct internal audits?** | "Yes. We have an annual internal audit program. Audits are conducted by trained internal auditors who are independent of the area being audited. Results are documented and reported in management review." *Reference:* [Internal Audit Program](reference-documents/REF-11-Internal-Audit-Program.md) |
-| 9.2.2 | **How do you select auditors and ensure objectivity?** | "Auditors are trained in ISO 9001 auditing. They do not audit their own work. We rotate auditors and may use auditors from other BMW Group units to ensure independence." |
+| 9.2.2 | **How do you select auditors and ensure objectivity?** | "Auditors are trained in ISO 9001 auditing. They do not audit their own work. We rotate auditors and may use auditors from other organizational units to ensure independence." |
 | 9.2.3 | **Can you show me internal audit records?** | *Have recent internal audit reports, findings, and corrective action records ready.* |
 
 ### 9.3 Management Review
@@ -460,8 +460,8 @@ graph LR
 
 | # | Typical Auditor Question | How to Answer |
 |---|--------------------------|---------------|
-| CC.3 | **How do you handle information security?** | "We follow BMW Group InfoSec policies. Access control is role-based. Secrets management uses vault solutions. All data in transit is encrypted (TLS 1.3). Data at rest is encrypted. We conduct regular security assessments and penetration tests." |
-| CC.4 | **How do you handle personal data in driving recordings?** | "Driving data may contain personal data (faces, license plates). We have documented data processing agreements. Anonymization/pseudonymization is applied where required. We comply with GDPR and BMW Group data protection policies." |
+| CC.3 | **How do you handle information security?** | "We follow corporate InfoSec policies. Access control is role-based. Secrets management uses vault solutions. All data in transit is encrypted (TLS 1.3). Data at rest is encrypted. We conduct regular security assessments and penetration tests." |
+| CC.4 | **How do you handle personal data in driving recordings?** | "Driving data may contain personal data (faces, license plates). We have documented data processing agreements. Anonymization/pseudonymization is applied where required. We comply with GDPR and organizational data protection policies." |
 
 ### Change Management
 

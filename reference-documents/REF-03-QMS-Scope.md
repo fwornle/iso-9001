@@ -22,13 +22,13 @@
 > - **CI/CD toolchains** and developer productivity tools supporting AD/ADAS software development
 > - **Data cataloguing and discovery** platforms enabling data-driven development workflows
 >
-> These products and services are provided to internal customers: software engineers and function owners working on Autonomous Driving (AD) and Advanced Driver Assistance Systems (ADAS) within BMW Group.
+> These products and services are provided to internal customers: software engineers and function owners working on Autonomous Driving (AD) and Advanced Driver Assistance Systems (ADAS) within the parent organization.
 
 ### 1.2 Organizational Boundaries
 
 | Attribute | Detail |
 |-----------|--------|
-| **Organization** | BMW Group |
+| **Organization** | _[Organization Name]_ |
 | **Division** | [Your Division] |
 | **Department** | [Your Department] |
 | **Unit** | Data Driven Development (DDD) |
@@ -70,7 +70,7 @@
 | ASPICE | Development process alignment for automotive SW |
 | GDPR / BDSG | Personal data in driving recordings |
 | ISO 21434 | Cybersecurity in automotive development |
-| BMW Group InfoSec Policies | Internal information security requirements |
+| Corporate InfoSec Policies | Internal information security requirements |
 | EU AI Act | Potential applicability to AI-based tooling |
 
 ---

@@ -21,7 +21,7 @@ Identifies all relevant interested parties, their needs and expectations, and ho
 | 1 | **AD/ADAS SW Engineers** | Primary Customer | Reliable, fast, well-documented tools; low-friction onboarding; responsive support | SLAs, user documentation, support channels, regular feedback sessions | NPS surveys, support tickets, sprint reviews | High |
 | 2 | **AD Function Owners** | Internal Customer | Tools that enable compliant validation (ISO 26262, ASPICE) | Tool qualification evidence, compliance documentation | Quarterly alignment meetings | High |
 | 3 | **Unit Management** | Management | Efficient resource use, strategic alignment, quality delivery | OKRs, management reviews, KPI dashboards | Monthly reporting, management review | High |
-| 4 | **BMW Group Management** | Top Management | Contribution to AD program success, cost efficiency | Strategic roadmap alignment, budget reporting | Quarterly business review | High |
+| 4 | **Corporate Management** | Top Management | Contribution to AD program success, cost efficiency | Strategic roadmap alignment, budget reporting | Quarterly business review | High |
 | 5 | **Information Security Team** | Internal Regulator | Compliance with InfoSec policies, secure data handling | Security assessments, vulnerability management | Audit results, security metrics | High |
 | 6 | **Data Protection Officer** | Internal Regulator | GDPR compliance, lawful data processing | Data protection impact assessments, anonymization | DPO reviews, compliance checks | High |
 | 7 | **Works Council** | Employee Rep | Fair working conditions, transparent processes | Compliance with agreements, open communication | Regular consultation | Medium |
@@ -47,7 +47,7 @@ quadrantChart
     AD SW Engineers: [0.9, 0.6]
     AD Function Owners: [0.7, 0.8]
     Unit Management: [0.8, 0.9]
-    BMW Group Mgmt: [0.5, 0.95]
+    Corporate Mgmt: [0.5, 0.95]
     InfoSec Team: [0.6, 0.7]
     Cloud Providers: [0.4, 0.3]
     Works Council: [0.3, 0.5]

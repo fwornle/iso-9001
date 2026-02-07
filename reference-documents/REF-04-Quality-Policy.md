@@ -21,7 +21,7 @@ The Data Driven Development (DDD) unit is committed to providing **reliable, sca
    Ensuring our data pipelines, simulation environments, and reprocessing infrastructure operate with high availability and zero tolerance for data corruption.
 
 3. **Compliance**
-   Meeting all applicable requirements including ISO 9001, ISO 26262 tool qualification, GDPR, cybersecurity standards, and BMW Group policies.
+   Meeting all applicable requirements including ISO 9001, ISO 26262 tool qualification, GDPR, cybersecurity standards, and organizational policies.
 
 4. **Data-Driven Decision Making**
    Using metrics, monitoring, and evidence to guide our decisions — practicing what we preach as a data-driven unit.

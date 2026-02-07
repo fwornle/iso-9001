@@ -25,7 +25,7 @@ This document captures the internal and external issues affecting the DDD unit's
 | S2 | Strong Agile/DevOps culture with CI/CD maturity | Supports rapid, reliable delivery and change management |
 | S3 | Direct access to real-world driving data (fleet) | Enables realistic validation and testing of our tools |
 | S4 | Cloud-native architecture (Infrastructure-as-Code) | Supports reproducibility, auditability, scalability |
-| S5 | Embedded in BMW Group ecosystem | Access to shared platforms, standards, and support functions |
+| S5 | Embedded in parent-organization ecosystem | Access to shared platforms, standards, and support functions |
 | S6 | *[Add your own]* | |
 
 ### Weaknesses (Internal, Negative)

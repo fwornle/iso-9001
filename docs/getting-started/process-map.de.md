@@ -1,267 +1,404 @@
 # QMS-Prozesslandkarte — DDD-Einheit
 
-## Data Driven Development | AD/ADAS Tooling
+=== ":material-lightning-bolt: Schnell (~1 Std.)"
 
----
+    ## Prozesslandschaft
 
-## 1. Übersicht der Prozesslandschaft
+    Unsere QMS-Prozesse sind in drei Ebenen gegliedert: **Management**, **Kern** und **Unterstützung**.
 
-Unsere QMS-Prozesse sind in drei Ebenen organisiert: **Management-**, **Kern- (wertschöpfende)** und **Unterstützungsprozesse**.
+    ```mermaid
+    graph TB
+        subgraph "MANAGEMENTPROZESSE"
+            direction LR
+            M1["Strategische Planung"] --- M2["Managementbewertung"] --- M3["Verbesserung"] --- M4["Risikomanagement"]
+        end
+        subgraph "KERNPROZESSE (Wertschöpfung)"
+            direction LR
+            C1["Bedarf"] --> C2["Anforderungen"] --> C3["Design"] --> C4["Entwicklung"] --> C5["V&V"] --> C6["Release"] --> C7["Betrieb"]
+            C7 -->|Feedback| C1
+        end
+        subgraph "UNTERSTÜTZUNGSPROZESSE"
+            direction LR
+            S1["Personal"] --- S2["Infrastruktur"] --- S3["Dok.-Lenkung"] --- S4["Lieferanten"] --- S5["Audit"] --- S6["Überwachung"]
+        end
+        M1 & M2 & M3 & M4 -.->|Steuern| C1
+        S1 & S2 & S3 & S4 & S5 & S6 -.->|Ermöglichen| C4
+        style M1 fill:#1a5276,color:#fff
+        style M2 fill:#1a5276,color:#fff
+        style M3 fill:#1a5276,color:#fff
+        style M4 fill:#1a5276,color:#fff
+        style C1 fill:#196f3d,color:#fff
+        style C2 fill:#196f3d,color:#fff
+        style C3 fill:#196f3d,color:#fff
+        style C4 fill:#196f3d,color:#fff
+        style C5 fill:#196f3d,color:#fff
+        style C6 fill:#196f3d,color:#fff
+        style C7 fill:#196f3d,color:#fff
+        style S1 fill:#7d3c98,color:#fff
+        style S2 fill:#7d3c98,color:#fff
+        style S3 fill:#7d3c98,color:#fff
+        style S4 fill:#7d3c98,color:#fff
+        style S5 fill:#7d3c98,color:#fff
+        style S6 fill:#7d3c98,color:#fff
+    ```
 
-```mermaid
-graph TB
-    subgraph "MANAGEMENTPROZESSE"
-        direction LR
-        M1["Strategische Planung<br/>& OKR-Festlegung"]
-        M2["Management-<br/>Bewertung"]
-        M3["Kontinuierliche<br/>Verbesserung"]
-        M4["Risiko- &<br/>Chancenmanagement"]
-        M1 --- M2 --- M3 --- M4
-    end
+    ---
 
-    subgraph "KERNPROZESSE (Wertschöpfungskette)"
-        direction LR
-        C1["Identifikation der<br/>Stakeholder-Bedürfnisse"] --> C2["Anforderungs-<br/>management"]
-        C2 --> C3["Architektur<br/>& Design"]
-        C3 --> C4["Agile Entwicklung<br/>(Scrum)"]
-        C4 --> C5["Verifizierung<br/>& Validierung"]
-        C5 --> C6["Freigabe &<br/>Bereitstellung"]
-        C6 --> C7["Betrieb &<br/>Support"]
-        C7 -->|Rückkopplungsschleife| C1
-    end
+    ## Prozessverantwortung
 
-    subgraph "UNTERSTÜTZUNGSPROZESSE"
-        direction LR
-        S1["Personal &<br/>Kompetenz"]
-        S2["Infrastruktur<br/>& Cloud"]
-        S3["Dokumenten- &<br/>Konfigurationslenkung"]
-        S4["Lieferanten- &<br/>Anbietermanagement"]
-        S5["Internes<br/>Audit"]
-        S6["Überwachung &<br/>Messung"]
-        S1 --- S2 --- S3 --- S4 --- S5 --- S6
-    end
+    | Prozess | Verantwortlich | ISO-Abschnitt |
+    |---------|----------------|:-------------:|
+    | Strategische Planung | Unit Lead | 5.1, 6.2 |
+    | Managementbewertung | Unit Lead + QMR | 9.3 |
+    | Risikomanagement | QMR | 6.1 |
+    | Anforderungen | Product Owner | 8.2, 8.3 |
+    | Entwicklung (Scrum) | Scrum Master + Team | 8.3, 8.5 |
+    | V&V | QA Lead | 8.3, 8.7 |
+    | Release & Deployment | DevOps Lead | 8.5 |
+    | Betrieb & Support | SRE/Ops Lead | 8.5, 9.1 |
+    | Internes Audit | QMR | 9.2 |
 
-    M1 & M2 & M3 & M4 -.->|Steuern & Lenken| C1
-    S1 & S2 & S3 & S4 & S5 & S6 -.->|Ermöglichen| C4
+=== ":material-book-open-variant: Wesentlich (~3 Std.)"
 
-    style M1 fill:#1a5276,color:#fff
-    style M2 fill:#1a5276,color:#fff
-    style M3 fill:#1a5276,color:#fff
-    style M4 fill:#1a5276,color:#fff
-    style C1 fill:#196f3d,color:#fff
-    style C2 fill:#196f3d,color:#fff
-    style C3 fill:#196f3d,color:#fff
-    style C4 fill:#196f3d,color:#fff
-    style C5 fill:#196f3d,color:#fff
-    style C6 fill:#196f3d,color:#fff
-    style C7 fill:#196f3d,color:#fff
-    style S1 fill:#7d3c98,color:#fff
-    style S2 fill:#7d3c98,color:#fff
-    style S3 fill:#7d3c98,color:#fff
-    style S4 fill:#7d3c98,color:#fff
-    style S5 fill:#7d3c98,color:#fff
-    style S6 fill:#7d3c98,color:#fff
-```
+    ## Prozesslandschaft
 
----
+    ```mermaid
+    graph TB
+        subgraph "MANAGEMENTPROZESSE"
+            direction LR
+            M1["Strategische<br/>Planung & OKRs"] --- M2["Management-<br/>bewertung"] --- M3["Kontinuierliche<br/>Verbesserung"] --- M4["Risiko-<br/>management"]
+        end
+        subgraph "KERNPROZESSE (Wertschöpfungskette)"
+            direction LR
+            C1["Bedarfs-<br/>ermittlung"] --> C2["Anforderungs-<br/>engineering"]
+            C2 --> C3["Architektur<br/>& Design"]
+            C3 --> C4["Agile Entwicklung<br/>(Scrum)"]
+            C4 --> C5["Verifizierung<br/>& Validierung"]
+            C5 --> C6["Release &<br/>Deployment"]
+            C6 --> C7["Betrieb &<br/>Support"]
+            C7 -->|Feedback| C1
+        end
+        subgraph "UNTERSTÜTZUNGSPROZESSE"
+            direction LR
+            S1["Personal &<br/>Kompetenz"] --- S2["Infrastruktur<br/>& Cloud"] --- S3["Dokumenten-<br/>lenkung"] --- S4["Lieferanten-<br/>mgmt"] --- S5["Internes<br/>Audit"] --- S6["Überwachung"]
+        end
+        M1 & M2 & M3 & M4 -.->|Steuern & Lenken| C1
+        S1 & S2 & S3 & S4 & S5 & S6 -.->|Ermöglichen| C4
+        style M1 fill:#1a5276,color:#fff
+        style M2 fill:#1a5276,color:#fff
+        style M3 fill:#1a5276,color:#fff
+        style M4 fill:#1a5276,color:#fff
+        style C1 fill:#196f3d,color:#fff
+        style C2 fill:#196f3d,color:#fff
+        style C3 fill:#196f3d,color:#fff
+        style C4 fill:#196f3d,color:#fff
+        style C5 fill:#196f3d,color:#fff
+        style C6 fill:#196f3d,color:#fff
+        style C7 fill:#196f3d,color:#fff
+        style S1 fill:#7d3c98,color:#fff
+        style S2 fill:#7d3c98,color:#fff
+        style S3 fill:#7d3c98,color:#fff
+        style S4 fill:#7d3c98,color:#fff
+        style S5 fill:#7d3c98,color:#fff
+        style S6 fill:#7d3c98,color:#fff
+    ```
 
-## 2. Details der Kernprozesse
+    ---
 
-### 2.1 Identifikation der Stakeholder-Bedürfnisse
+    ## Kernprozesse im Detail
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | Product Owner |
-| **Eingaben** | Kundenfeedback, NPS-Umfragen, Roadmap-Anfragen, Vorfalltrends, regulatorische Änderungen |
-| **Aktivitäten** | Stakeholder-Interviews, Umfrageanalyse, Backlog-Pflege, OKR-Abstimmung |
-| **Ergebnisse** | Priorisiertes Backlog, aktualisiertes Stakeholder-Register, Roadmap |
-| **KPIs** | Reaktionszeit auf Feature-Anfragen, Aktualität des Backlogs |
-| **ISO 9001 Abschnitt** | 4.2, 8.2 |
+    | Prozess | Verantwortlich | Eingaben | Ergebnisse | KPIs | Abschnitt |
+    |---------|----------------|----------|------------|------|:---------:|
+    | Bedarfsermittlung | PO | Feedback, Umfragen | Backlog, Roadmap | Reaktionszeit | 4.2, 8.2 |
+    | Anforderungen | PO + Tech Lead | Backlog | User Stories, Specs | Ablehnungsrate | 8.2, 8.3 |
+    | Architektur & Design | Tech Lead | Anforderungen | ADRs, API-Specs | ADR-Abdeckung | 8.3 |
+    | Entwicklung (Scrum) | SM + Team | Sprint Backlog | Getesteter Code | Velocity | 8.3, 8.5 |
+    | V&V | QA | Code, Kriterien | Testberichte | Abdeckung >= 80% | 8.3, 8.7 |
+    | Release | DevOps | Getestete Artefakte | Produktionsrelease | Deploy-Frequenz | 8.5 |
+    | Betrieb | SRE | Produktivsysteme | Incident Reports | Verfügbarkeit >= 99,5% | 8.5, 9.1 |
 
-### 2.2 Anforderungsmanagement
+    ---
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | Product Owner + Tech Lead |
-| **Eingaben** | Priorisiertes Backlog, technische Einschränkungen, Architekturrichtlinien |
-| **Aktivitäten** | Erstellung von User Stories, Definition von Akzeptanzkriterien, Verfeinerungssitzungen, Machbarkeitsanalyse |
-| **Ergebnisse** | Verfeinerte User Stories mit Akzeptanzkriterien, technische Spezifikationen |
-| **KPIs** | Ablehnungsrate von Stories bei der Überprüfung, Bewertung der Anforderungsklarheit |
-| **ISO 9001 Abschnitt** | 8.2, 8.3 |
+    ## Prozessverantwortung
 
-### 2.3 Architektur & Design
+    | Prozess | Verantwortlich | ISO-Abschnitt |
+    |---------|----------------|:-------------:|
+    | Strategische Planung | Unit Lead | 5.1, 6.2 |
+    | Managementbewertung | Unit Lead + QMR | 9.3 |
+    | Risikomanagement | QMR | 6.1 |
+    | Anforderungen | Product Owner | 8.2, 8.3 |
+    | Entwicklung | SM + Team | 8.3, 8.5 |
+    | V&V | QA Lead | 8.3, 8.7 |
+    | Release & Deployment | DevOps Lead | 8.5 |
+    | Betrieb | SRE/Ops Lead | 8.5, 9.1 |
+    | Dokumentenlenkung | QMR | 7.5 |
+    | Lieferantenmanagement | Tech Lead | 8.4 |
+    | Internes Audit | QMR | 9.2 |
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | Tech Lead / Architekt |
-| **Eingaben** | Verfeinerte Anforderungen, nicht-funktionale Anforderungen, Tech-Radar |
-| **Aktivitäten** | Architecture Decision Records (ADRs), Design-Reviews, Prototyping, Bedrohungsmodellierung |
-| **Ergebnisse** | ADRs, Systemdesign-Dokumente, API-Spezifikationen, Sicherheitsbewertung |
-| **KPIs** | ADR-Abdeckung bei wesentlichen Änderungen, Abschlussrate von Design-Reviews |
-| **ISO 9001 Abschnitt** | 8.3 |
+=== ":material-book-open-page-variant: Vollständig"
 
-### 2.4 Agile Entwicklung (Scrum)
+    ## Data Driven Development | AD/ADAS Tooling
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | Scrum Master + Entwicklungsteam |
-| **Eingaben** | Sprint-Backlog, Codierungsstandards, Branch-Strategie |
-| **Aktivitäten** | Sprint-Planung, tägliche Stand-ups, Programmierung, Pair Programming, Code-Review |
-| **Ergebnisse** | Getesteter Code in Feature-Branches, PR-Reviews, aktualisierte Dokumentation |
-| **KPIs** | Velocity, Sprint-Zielerreichungsrate, Bearbeitungszeit für Code-Reviews |
-| **ISO 9001 Abschnitt** | 8.3, 8.5 |
+    ---
 
-```mermaid
-graph LR
-    subgraph "Sprint-Zyklus (2 Wochen)"
-        A["Sprint-<br/>Planung"] --> B["Tägliches<br/>Stand-up"]
-        B --> C["Entwicklung<br/>& Code-Review"]
-        C --> D["Kontinuierliche<br/>Integration"]
-        D --> E["Sprint-<br/>Review / Demo"]
-        E --> F["Sprint-<br/>Retrospektive"]
-        F -->|Nächster Sprint| A
-    end
-    style A fill:#1a5276,color:#fff
-    style B fill:#2471a3,color:#fff
-    style C fill:#2e86c1,color:#fff
-    style D fill:#3498db,color:#fff
-    style E fill:#196f3d,color:#fff
-    style F fill:#e67e22,color:#fff
-```
+    ## 1. Übersicht der Prozesslandschaft
 
-### 2.5 Verifizierung & Validierung
+    Unsere QMS-Prozesse sind in drei Ebenen organisiert: **Management-**, **Kern- (wertschöpfende)** und **Unterstützungsprozesse**.
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | QA / Entwicklungsteam |
-| **Eingaben** | Codeänderungen, Akzeptanzkriterien, Testpläne |
-| **Aktivitäten** | Unit-Tests, Integrationstests, E2E-Tests, Leistungstests, Sicherheitsscans, Benutzerakzeptanztests |
-| **Ergebnisse** | Testberichte, Abdeckungsmetriken, Ergebnisse der Sicherheitsscans, UAT-Freigabe |
-| **KPIs** | Testabdeckung (≥80%), Fehler-Escape-Rate, Testbestehensrate |
-| **ISO 9001 Abschnitt** | 8.3, 8.5, 8.7 |
+    ```mermaid
+    graph TB
+        subgraph "MANAGEMENTPROZESSE"
+            direction LR
+            M1["Strategische Planung<br/>& OKR-Festlegung"]
+            M2["Management-<br/>Bewertung"]
+            M3["Kontinuierliche<br/>Verbesserung"]
+            M4["Risiko- &<br/>Chancenmanagement"]
+            M1 --- M2 --- M3 --- M4
+        end
 
-```mermaid
-graph TB
-    subgraph "Testpyramide"
-        direction TB
-        E2E["E2E-Tests<br/>(Weniger, Langsamer, Höheres Vertrauen)"]
-        INT["Integrationstests<br/>(API, Service-Ebene)"]
-        UNIT["Unit-Tests<br/>(Viele, Schnell, Fokussiert)"]
-    end
-    subgraph "Zusätzliche Qualitäts-Gates"
-        SA["Statische Analyse<br/>(Linting, Typprüfung)"]
-        SEC["Sicherheitsscans<br/>(SAST, Abhängigkeitsaudit)"]
-        PERF["Leistungs-<br/>Benchmarks"]
-        UAT["Benutzer-<br/>Akzeptanztests"]
-    end
-    UNIT --> INT --> E2E
-    E2E --> SA & SEC & PERF
-    SA & SEC & PERF --> UAT
-    style UNIT fill:#196f3d,color:#fff
-    style INT fill:#2471a3,color:#fff
-    style E2E fill:#7d3c98,color:#fff
-    style SA fill:#e67e22,color:#fff
-    style SEC fill:#c0392b,color:#fff
-    style PERF fill:#1a5276,color:#fff
-    style UAT fill:#196f3d,color:#fff
-```
+        subgraph "KERNPROZESSE (Wertschöpfungskette)"
+            direction LR
+            C1["Identifikation der<br/>Stakeholder-Bedürfnisse"] --> C2["Anforderungs-<br/>management"]
+            C2 --> C3["Architektur<br/>& Design"]
+            C3 --> C4["Agile Entwicklung<br/>(Scrum)"]
+            C4 --> C5["Verifizierung<br/>& Validierung"]
+            C5 --> C6["Freigabe &<br/>Bereitstellung"]
+            C6 --> C7["Betrieb &<br/>Support"]
+            C7 -->|Rückkopplungsschleife| C1
+        end
 
-### 2.6 Freigabe & Bereitstellung
+        subgraph "UNTERSTÜTZUNGSPROZESSE"
+            direction LR
+            S1["Personal &<br/>Kompetenz"]
+            S2["Infrastruktur<br/>& Cloud"]
+            S3["Dokumenten- &<br/>Konfigurationslenkung"]
+            S4["Lieferanten- &<br/>Anbietermanagement"]
+            S5["Internes<br/>Audit"]
+            S6["Überwachung &<br/>Messung"]
+            S1 --- S2 --- S3 --- S4 --- S5 --- S6
+        end
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | DevOps / Release-Manager |
-| **Eingaben** | Getestete Artefakte, Release Notes, Bereitstellungshandbuch |
-| **Aktivitäten** | Staging-Bereitstellung, Smoke-Tests, Canary-/Blue-Green-Produktionsbereitstellung, Rollback-Bereitschaft |
-| **Ergebnisse** | Produktionsfreigabe, Release Notes, Bereitstellungsaufzeichnungen |
-| **KPIs** | Bereitstellungsfrequenz, Bereitstellungsfehlerrate, Rollback-Rate |
-| **ISO 9001 Abschnitt** | 8.5, 8.7 |
+        M1 & M2 & M3 & M4 -.->|Steuern & Lenken| C1
+        S1 & S2 & S3 & S4 & S5 & S6 -.->|Ermöglichen| C4
 
-### 2.7 Betrieb & Support
+        style M1 fill:#1a5276,color:#fff
+        style M2 fill:#1a5276,color:#fff
+        style M3 fill:#1a5276,color:#fff
+        style M4 fill:#1a5276,color:#fff
+        style C1 fill:#196f3d,color:#fff
+        style C2 fill:#196f3d,color:#fff
+        style C3 fill:#196f3d,color:#fff
+        style C4 fill:#196f3d,color:#fff
+        style C5 fill:#196f3d,color:#fff
+        style C6 fill:#196f3d,color:#fff
+        style C7 fill:#196f3d,color:#fff
+        style S1 fill:#7d3c98,color:#fff
+        style S2 fill:#7d3c98,color:#fff
+        style S3 fill:#7d3c98,color:#fff
+        style S4 fill:#7d3c98,color:#fff
+        style S5 fill:#7d3c98,color:#fff
+        style S6 fill:#7d3c98,color:#fff
+    ```
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | Betrieb / SRE-Team |
-| **Eingaben** | Produktionssysteme, Überwachungsalarme, Kundensupportanfragen |
-| **Aktivitäten** | Vorfallmanagement, SLA-Überwachung, Kapazitätsplanung, Patching, Kundensupport |
-| **Ergebnisse** | Vorfallberichte, SLA-Berichte, Kapazitätspläne, Kundenlösungen |
-| **KPIs** | Verfügbarkeit (≥99,5%), MTTR, Vorfallwiederholungsrate, Bearbeitungszeit für Supporttickets |
-| **ISO 9001 Abschnitt** | 8.5, 9.1 |
+    ---
 
----
+    ## 2. Details der Kernprozesse
 
-## 3. Details der Managementprozesse
+    ### 2.1 Identifikation der Stakeholder-Bedürfnisse
 
-### 3.1 Strategische Planung & OKR-Festlegung
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | Product Owner |
+    | **Eingaben** | Kundenfeedback, NPS-Umfragen, Roadmap-Anfragen, Vorfalltrends, regulatorische Änderungen |
+    | **Aktivitäten** | Stakeholder-Interviews, Umfrageanalyse, Backlog-Pflege, OKR-Abstimmung |
+    | **Ergebnisse** | Priorisiertes Backlog, aktualisiertes Stakeholder-Register, Roadmap |
+    | **KPIs** | Reaktionszeit auf Feature-Anfragen, Aktualität des Backlogs |
+    | **ISO 9001 Abschnitt** | 4.2, 8.2 |
 
-```mermaid
-graph LR
-    A["Unternehmens-<br/>strategie"] --> B["Einheitsstrategie<br/>& Vision"]
-    B --> C["Vierteljährliche<br/>OKR-Planung"]
-    C --> D["OKR-Kaskadierung<br/>auf Teamebene"]
-    D --> E["Ausrichtung der<br/>Sprint-Ziele"]
-    E --> F["Überprüfung &<br/>Anpassung"]
-    F -->|Vierteljährlich| C
-    style A fill:#1a5276,color:#fff
-    style B fill:#2471a3,color:#fff
-    style C fill:#2e86c1,color:#fff
-    style D fill:#3498db,color:#fff
-    style E fill:#5dade2,color:#fff
-    style F fill:#e67e22,color:#fff
-```
+    ### 2.2 Anforderungsmanagement
 
-### 3.2 Risiko- & Chancenmanagement
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | Product Owner + Tech Lead |
+    | **Eingaben** | Priorisiertes Backlog, technische Einschränkungen, Architekturrichtlinien |
+    | **Aktivitäten** | Erstellung von User Stories, Definition von Akzeptanzkriterien, Verfeinerungssitzungen, Machbarkeitsanalyse |
+    | **Ergebnisse** | Verfeinerte User Stories mit Akzeptanzkriterien, technische Spezifikationen |
+    | **KPIs** | Ablehnungsrate von Stories bei der Überprüfung, Bewertung der Anforderungsklarheit |
+    | **ISO 9001 Abschnitt** | 8.2, 8.3 |
 
-| Attribut | Beschreibung |
-|----------|--------------|
-| **Verantwortlicher** | QMB + Einheitsleiter |
-| **Häufigkeit** | Vierteljährliche Überprüfung, kontinuierliche Identifikation |
-| **Methode** | 5×5-Risikomatrix, FMEA für kritische Komponenten |
-| **Aufzeichnungen** | Risikoregister (REF-06) |
-| **ISO 9001 Abschnitt** | 6.1 |
+    ### 2.3 Architektur & Design
 
----
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | Tech Lead / Architekt |
+    | **Eingaben** | Verfeinerte Anforderungen, nicht-funktionale Anforderungen, Tech-Radar |
+    | **Aktivitäten** | Architecture Decision Records (ADRs), Design-Reviews, Prototyping, Bedrohungsmodellierung |
+    | **Ergebnisse** | ADRs, Systemdesign-Dokumente, API-Spezifikationen, Sicherheitsbewertung |
+    | **KPIs** | ADR-Abdeckung bei wesentlichen Änderungen, Abschlussrate von Design-Reviews |
+    | **ISO 9001 Abschnitt** | 8.3 |
 
-## 4. Prozess-Interaktionsmatrix
+    ### 2.4 Agile Entwicklung (Scrum)
 
-Diese Matrix zeigt, wie die Prozesse miteinander interagieren:
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | Scrum Master + Entwicklungsteam |
+    | **Eingaben** | Sprint-Backlog, Codierungsstandards, Branch-Strategie |
+    | **Aktivitäten** | Sprint-Planung, tägliche Stand-ups, Programmierung, Pair Programming, Code-Review |
+    | **Ergebnisse** | Getesteter Code in Feature-Branches, PR-Reviews, aktualisierte Dokumentation |
+    | **KPIs** | Velocity, Sprint-Zielerreichungsrate, Bearbeitungszeit für Code-Reviews |
+    | **ISO 9001 Abschnitt** | 8.3, 8.5 |
 
-| Prozess ↓ speist in → | Anf.-Mgmt. | Design | Entw. | V&V | Freigabe | Betrieb | Mgmt-Bewertung |
-|------------------------|:----------:|:------:|:-----:|:---:|:--------:|:-------:|:--------------:|
-| **Bedarfsermittlung** | ● | | | | | | ● |
-| **Anforderungsmgmt.** | | ● | | | | | |
-| **Design** | | | ● | | | | |
-| **Entwicklung** | | | | ● | | | |
-| **V&V** | | | ○ | | ● | | ● |
-| **Freigabe** | | | | | | ● | ● |
-| **Betrieb** | ● | | | | | | ● |
-| **Risikomanagement** | ● | ● | | ● | | | ● |
+    ```mermaid
+    graph LR
+        subgraph "Sprint-Zyklus (2 Wochen)"
+            A["Sprint-<br/>Planung"] --> B["Tägliches<br/>Stand-up"]
+            B --> C["Entwicklung<br/>& Code-Review"]
+            C --> D["Kontinuierliche<br/>Integration"]
+            D --> E["Sprint-<br/>Review / Demo"]
+            E --> F["Sprint-<br/>Retrospektive"]
+            F -->|Nächster Sprint| A
+        end
+        style A fill:#1a5276,color:#fff
+        style B fill:#2471a3,color:#fff
+        style C fill:#2e86c1,color:#fff
+        style D fill:#3498db,color:#fff
+        style E fill:#196f3d,color:#fff
+        style F fill:#e67e22,color:#fff
+    ```
 
-● = Primäre Eingabe | ○ = Rückkopplungsschleife
+    ### 2.5 Verifizierung & Validierung
 
----
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | QA / Entwicklungsteam |
+    | **Eingaben** | Codeänderungen, Akzeptanzkriterien, Testpläne |
+    | **Aktivitäten** | Unit-Tests, Integrationstests, E2E-Tests, Leistungstests, Sicherheitsscans, Benutzerakzeptanztests |
+    | **Ergebnisse** | Testberichte, Abdeckungsmetriken, Ergebnisse der Sicherheitsscans, UAT-Freigabe |
+    | **KPIs** | Testabdeckung (≥80%), Fehler-Escape-Rate, Testbestehensrate |
+    | **ISO 9001 Abschnitt** | 8.3, 8.5, 8.7 |
 
-## 5. Zusammenfassung der Prozessverantwortung
+    ```mermaid
+    graph TB
+        subgraph "Testpyramide"
+            direction TB
+            E2E["E2E-Tests<br/>(Weniger, Langsamer, Höheres Vertrauen)"]
+            INT["Integrationstests<br/>(API, Service-Ebene)"]
+            UNIT["Unit-Tests<br/>(Viele, Schnell, Fokussiert)"]
+        end
+        subgraph "Zusätzliche Qualitäts-Gates"
+            SA["Statische Analyse<br/>(Linting, Typprüfung)"]
+            SEC["Sicherheitsscans<br/>(SAST, Abhängigkeitsaudit)"]
+            PERF["Leistungs-<br/>Benchmarks"]
+            UAT["Benutzer-<br/>Akzeptanztests"]
+        end
+        UNIT --> INT --> E2E
+        E2E --> SA & SEC & PERF
+        SA & SEC & PERF --> UAT
+        style UNIT fill:#196f3d,color:#fff
+        style INT fill:#2471a3,color:#fff
+        style E2E fill:#7d3c98,color:#fff
+        style SA fill:#e67e22,color:#fff
+        style SEC fill:#c0392b,color:#fff
+        style PERF fill:#1a5276,color:#fff
+        style UAT fill:#196f3d,color:#fff
+    ```
 
-| Prozess | Verantwortliche Rolle | ISO 9001 Abschnitt |
-|---------|-----------------------|--------------------|
-| Strategische Planung | Einheitsleiter | 5.1, 6.2 |
-| Management-Bewertung | Einheitsleiter + QMB | 9.3 |
-| Risikomanagement | QMB | 6.1 |
-| Kontinuierliche Verbesserung | QMB | 10.1, 10.3 |
-| Bedarfsermittlung | Product Owner | 4.2, 8.2 |
-| Anforderungsmanagement | Product Owner + Tech Lead | 8.2, 8.3 |
-| Architektur & Design | Tech Lead | 8.3 |
-| Agile Entwicklung | Scrum Master + Team | 8.3, 8.5 |
-| Verifizierung & Validierung | QA-Leiter | 8.3, 8.7 |
-| Freigabe & Bereitstellung | DevOps-Leiter | 8.5 |
-| Betrieb & Support | SRE/Ops-Leiter | 8.5, 9.1 |
-| Personal & Kompetenz | Teamleiter + HR | 7.1, 7.2 |
-| Infrastruktur | DevOps-Leiter | 7.1 |
-| Dokumentenlenkung | QMB | 7.5 |
-| Lieferantenmanagement | Beschaffung + Tech Lead | 8.4 |
-| Internes Audit | QMB (Unabhängigkeit erforderlich) | 9.2 |
+    ### 2.6 Freigabe & Bereitstellung
 
----
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | DevOps / Release-Manager |
+    | **Eingaben** | Getestete Artefakte, Release Notes, Bereitstellungshandbuch |
+    | **Aktivitäten** | Staging-Bereitstellung, Smoke-Tests, Canary-/Blue-Green-Produktionsbereitstellung, Rollback-Bereitschaft |
+    | **Ergebnisse** | Produktionsfreigabe, Release Notes, Bereitstellungsaufzeichnungen |
+    | **KPIs** | Bereitstellungsfrequenz, Bereitstellungsfehlerrate, Rollback-Rate |
+    | **ISO 9001 Abschnitt** | 8.5, 8.7 |
 
-*Dokumentversion: 1.0 | Erstellt: 06.02.2026 | Verantwortlich: QMB, DDD-Einheit*
+    ### 2.7 Betrieb & Support
+
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | Betrieb / SRE-Team |
+    | **Eingaben** | Produktionssysteme, Überwachungsalarme, Kundensupportanfragen |
+    | **Aktivitäten** | Vorfallmanagement, SLA-Überwachung, Kapazitätsplanung, Patching, Kundensupport |
+    | **Ergebnisse** | Vorfallberichte, SLA-Berichte, Kapazitätspläne, Kundenlösungen |
+    | **KPIs** | Verfügbarkeit (≥99,5%), MTTR, Vorfallwiederholungsrate, Bearbeitungszeit für Supporttickets |
+    | **ISO 9001 Abschnitt** | 8.5, 9.1 |
+
+    ---
+
+    ## 3. Details der Managementprozesse
+
+    ### 3.1 Strategische Planung & OKR-Festlegung
+
+    ```mermaid
+    graph LR
+        A["Unternehmens-<br/>strategie"] --> B["Einheitsstrategie<br/>& Vision"]
+        B --> C["Vierteljährliche<br/>OKR-Planung"]
+        C --> D["OKR-Kaskadierung<br/>auf Teamebene"]
+        D --> E["Ausrichtung der<br/>Sprint-Ziele"]
+        E --> F["Überprüfung &<br/>Anpassung"]
+        F -->|Vierteljährlich| C
+        style A fill:#1a5276,color:#fff
+        style B fill:#2471a3,color:#fff
+        style C fill:#2e86c1,color:#fff
+        style D fill:#3498db,color:#fff
+        style E fill:#5dade2,color:#fff
+        style F fill:#e67e22,color:#fff
+    ```
+
+    ### 3.2 Risiko- & Chancenmanagement
+
+    | Attribut | Beschreibung |
+    |----------|--------------|
+    | **Verantwortlicher** | QMB + Einheitsleiter |
+    | **Häufigkeit** | Vierteljährliche Überprüfung, kontinuierliche Identifikation |
+    | **Methode** | 5×5-Risikomatrix, FMEA für kritische Komponenten |
+    | **Aufzeichnungen** | Risikoregister (REF-06) |
+    | **ISO 9001 Abschnitt** | 6.1 |
+
+    ---
+
+    ## 4. Prozess-Interaktionsmatrix
+
+    Diese Matrix zeigt, wie die Prozesse miteinander interagieren:
+
+    | Prozess ↓ speist in → | Anf.-Mgmt. | Design | Entw. | V&V | Freigabe | Betrieb | Mgmt-Bewertung |
+    |------------------------|:----------:|:------:|:-----:|:---:|:--------:|:-------:|:--------------:|
+    | **Bedarfsermittlung** | ● | | | | | | ● |
+    | **Anforderungsmgmt.** | | ● | | | | | |
+    | **Design** | | | ● | | | | |
+    | **Entwicklung** | | | | ● | | | |
+    | **V&V** | | | ○ | | ● | | ● |
+    | **Freigabe** | | | | | | ● | ● |
+    | **Betrieb** | ● | | | | | | ● |
+    | **Risikomanagement** | ● | ● | | ● | | | ● |
+
+    ● = Primäre Eingabe | ○ = Rückkopplungsschleife
+
+    ---
+
+    ## 5. Zusammenfassung der Prozessverantwortung
+
+    | Prozess | Verantwortliche Rolle | ISO 9001 Abschnitt |
+    |---------|-----------------------|--------------------|
+    | Strategische Planung | Einheitsleiter | 5.1, 6.2 |
+    | Management-Bewertung | Einheitsleiter + QMB | 9.3 |
+    | Risikomanagement | QMB | 6.1 |
+    | Kontinuierliche Verbesserung | QMB | 10.1, 10.3 |
+    | Bedarfsermittlung | Product Owner | 4.2, 8.2 |
+    | Anforderungsmanagement | Product Owner + Tech Lead | 8.2, 8.3 |
+    | Architektur & Design | Tech Lead | 8.3 |
+    | Agile Entwicklung | Scrum Master + Team | 8.3, 8.5 |
+    | Verifizierung & Validierung | QA-Leiter | 8.3, 8.7 |
+    | Freigabe & Bereitstellung | DevOps-Leiter | 8.5 |
+    | Betrieb & Support | SRE/Ops-Leiter | 8.5, 9.1 |
+    | Personal & Kompetenz | Teamleiter + HR | 7.1, 7.2 |
+    | Infrastruktur | DevOps-Leiter | 7.1 |
+    | Dokumentenlenkung | QMB | 7.5 |
+    | Lieferantenmanagement | Beschaffung + Tech Lead | 8.4 |
+    | Internes Audit | QMB (Unabhängigkeit erforderlich) | 9.2 |
+
+    ---
+
+    *Dokumentversion: 1.0 | Erstellt: 06.02.2026 | Verantwortlich: QMB, DDD-Einheit*

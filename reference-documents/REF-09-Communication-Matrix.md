@@ -33,7 +33,7 @@ Defines internal and external communication requirements for the QMS, as require
 
 ---
 
-## 3. External Communication (to other BMW Group units)
+## 3. External Communication (to other organizational units)
 
 | What | Purpose | When | From | To | How | Records |
 |------|---------|------|------|-----|-----|---------|
@@ -43,7 +43,7 @@ Defines internal and external communication requirements for the QMS, as require
 | Roadmap Sharing | Align on upcoming features | Quarterly | PO | Customer stakeholders | Presentation | Roadmap document |
 | Customer Feedback Collection | Gather satisfaction data | Quarterly | PO | AD/ADAS teams | Survey (NPS) | Survey results |
 | Security Incident Report | Mandatory reporting | As needed | Security officer | InfoSec team, DPO | Formal report | Incident record |
-| Audit Results (to BMW QM) | Report on QMS status | Annually | QMR | BMW Group QM | Formal report | Audit summary |
+| Audit Results (to Corporate QM) | Report on QMS status | Annually | QMR | Corporate QM | Formal report | Audit summary |
 
 ---
 

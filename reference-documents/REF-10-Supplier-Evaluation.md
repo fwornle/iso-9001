@@ -50,7 +50,7 @@ Defines the process for evaluating, selecting, and monitoring external providers
 | License compatibility (MIT, Apache 2.0, etc.) | ☐ Compatible |
 | Community health (activity, maintainers, issues) | ☐ Active |
 | Security vulnerability history | ☐ Acceptable |
-| BMW Group InfoSec approval | ☐ Approved |
+| Corporate InfoSec approval | ☐ Approved |
 | SBOM inclusion | ☐ Included |
 
 ---

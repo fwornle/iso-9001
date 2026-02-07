@@ -1,163 +1,219 @@
 # REF-12: Vorlage Managementbewertung
 
-## DDD-Einheit — Data Driven Development | AD/ADAS Tooling
+=== ":material-lightning-bolt: Schnell (~1 Std.)"
 
-**Dokumentenverantwortlicher:** Qualitätsmanagementbeauftragter (QMB)
-**Sitzungsleitung:** Abteilungsleiter
+    **ISO 9001 Abschnitt 9.3** | **Verantwortlich:** QMR | **Vorsitz:** Unit Lead
 
----
+    ## Managementbewertung — Erforderliche Eingaben
 
-## Protokoll der Managementbewertung
+    1. Status der Maßnahmen aus vorherigen Bewertungen
+    2. Änderungen externer/interner Themen
+    3. QMS-Leistung: Kundenzufriedenheit, Qualitätsziele, Prozessleistung, NKs/CAPAs, Auditergebnisse
+    4. Angemessenheit der Ressourcen
+    5. Risiken- und Chancen-Überprüfung
+    6. Verbesserungsmöglichkeiten
 
-| Attribut | Detail |
-|-----------|--------|
-| **Datum** | TT.MM.JJJJ |
-| **Uhrzeit** | HH:MM – HH:MM |
-| **Ort** | _[Raum / Teams-Link]_ |
-| **Teilnehmer** | _[Namen und Rollen]_ |
-| **Abwesend** | _[Namen]_ |
-| **Protokollführung** | _[Name]_ |
+    ## Erforderliche Ergebnisse
 
----
+    - Entscheidungen zu Verbesserungsmaßnahmen
+    - Ressourcenzuweisungsänderungen
+    - Aktualisierte Qualitätsziele
+    - Maßnahmen mit Verantwortlichen und Terminen
 
-## Tagesordnung / Erforderliche Eingaben (ISO 9001:2015, Abschnitt 9.3.2)
+    > **Frequenz:** Quartalsweise + jährlich umfassend.
 
-### 1. Status der Maßnahmen aus vorherigen Managementbewertungen
+=== ":material-book-open-variant: Wesentlich (~3 Std.)"
 
-| Maßnahme-Nr. | Beschreibung | Verantwortlich | Fälligkeitsdatum | Status | Kommentare |
-|:--------:|-------------|-------|:--------:|:------:|----------|
-| MR-_[#]_ | _[Maßnahme]_ | _[Name]_ | _[Datum]_ | ☐ Offen / ✅ Geschlossen | |
-| | | | | | |
+    **ISO 9001 Abschnitt 9.3** | **Verantwortlich:** QMR | **Frequenz:** Quartalsweise
 
-### 2. Änderungen bei externen und internen Themen
+    ## Agenda — Erforderliche Eingaben (Abschnitt 9.3.2)
 
-| Thema | Typ | Änderungsbeschreibung | Auswirkung auf QMS | Erforderliche Maßnahme |
-|-------|------|-------------------|---------------|-----------------|
-| _[Thema]_ | Intern / Extern | _[Was hat sich geändert]_ | _[Auswirkung]_ | _[Maßnahme]_ |
-| | | | | |
+    ### 1. Vorherige Maßnahmen
 
-**Referenz:** [REF-01 Kontextanalyse](../qms-framework/context-analysis.md)
+    | Nr. | Beschreibung | Verantwortlich | Fällig | Status |
+    |:---:|-------------|----------------|:------:|:------:|
+    | MR-_[#]_ | _[Maßnahme]_ | _[Name]_ | _[Datum]_ | ☐/✅ |
 
-### 3. QMS-Leistung und -Wirksamkeit
+    ### 2. Kontextänderungen
 
-#### 3a. Kundenzufriedenheit
+    | Thema | Änderung | Auswirkung | Maßnahme |
+    |-------|-----------|-----------|------------|
+    | _[Thema]_ | _[Änderung]_ | _[Auswirkung]_ | _[Maßnahme]_ |
 
-| Kennzahl | Vorheriger Zeitraum | Aktueller Zeitraum | Ziel | Trend | Maßnahme |
-|--------|:--------------:|:--------------:|:------:|:-----:|--------|
-| NPS-Wert | _[#]_ | _[#]_ | ≥ 40 | ↑↓→ | |
-| Lösungszeit für Support-Tickets | _[Stunden]_ | _[Stunden]_ | _[Ziel]_ | ↑↓→ | |
-| Umsetzungsrate von Feature-Anfragen | _[%]_ | _[%]_ | _[Ziel]_ | ↑↓→ | |
+    ### 3. QMS-Leistung
 
-#### 3b. Leistung der Qualitätsziele
+    | Ziel | Vorherig | Aktuell | Zielwert | Status |
+    |------|:--------:|:-------:|:--------:|:------:|
+    | QO-1: Verfügbarkeit | _[%]_ | _[%]_ | >= 99,5% | &#x1F7E2;&#x1F7E1;&#x1F534; |
+    | QO-2: MTTR | _[Std.]_ | _[Std.]_ | < 4 Std. | &#x1F7E2;&#x1F7E1;&#x1F534; |
+    | QO-3: NPS | _[#]_ | _[#]_ | >= 40 | &#x1F7E2;&#x1F7E1;&#x1F534; |
 
-| Ziel | KPI | Vorher | Aktuell | Ziel | Status |
-|-----------|-----|:--------:|:-------:|:------:|:------:|
-| QO-1: Verfügbarkeit | Uptime % | _[%]_ | _[%]_ | ≥ 99,5% | 🟢🟡🔴 |
-| QO-2: MTTR | Stunden | _[h]_ | _[h]_ | < 4h | 🟢🟡🔴 |
-| QO-3: NPS | Wert | _[#]_ | _[#]_ | ≥ 40 | 🟢🟡🔴 |
-| QO-4: Datenintegrität | Vorfälle | _[#]_ | _[#]_ | 0 | 🟢🟡🔴 |
-| QO-5: Release-Qualität | Erfolgsrate | _[%]_ | _[%]_ | 100% | 🟢🟡🔴 |
-| QO-6: Testabdeckung | Abdeckung % | _[%]_ | _[%]_ | ≥ 80% | 🟢🟡🔴 |
-| QO-7: Schulung | Abschlussrate % | _[%]_ | _[%]_ | ≥ 90% | 🟢🟡🔴 |
+    ## Ergebnisse (Abschnitt 9.3.3)
 
-**Referenz:** [REF-07 Qualitätsziele](../planning/quality-objectives.md)
+    | Nr. | Entscheidung/Maßnahme | Verantwortlich | Fällig |
+    |-----|-------------------------|----------------|:------:|
+    | D-_[#]_ | _[Entscheidung]_ | _[Name]_ | _[Datum]_ |
 
-#### 3c. Prozessleistung
+=== ":material-book-open-page-variant: Vollständig"
 
-| Prozess | Schlüsselkennzahl | Vorher | Aktuell | Trend | Problem / Maßnahme |
-|---------|-----------|:--------:|:-------:|:-----:|---------------|
-| Entwicklung | Sprint-Velocity | _[Pkt.]_ | _[Pkt.]_ | ↑↓→ | |
-| Deployment | Deploy-Häufigkeit | _[/Woche]_ | _[/Woche]_ | ↑↓→ | |
-| Deployment | Fehlerrate | _[%]_ | _[%]_ | ↑↓→ | |
-| Betrieb | MTTR | _[h]_ | _[h]_ | ↑↓→ | |
-| Betrieb | Anzahl Störungen | _[#]_ | _[#]_ | ↑↓→ | |
+    ## DDD-Einheit — Data Driven Development | AD/ADAS Tooling
 
-#### 3d. Nichtkonformitäten und Korrekturmaßnahmen
+    **Dokumentenverantwortlicher:** Qualitätsmanagementbeauftragter (QMB)
+    **Sitzungsleitung:** Abteilungsleiter
 
-| CAPA-Nr. | Beschreibung | Grundursache | Ergriffene Maßnahme | Status | Wirksam? |
-|:------:|-------------|------------|-------------|:------:|:----------:|
-| CA-_[#]_ | _[Beschreibung]_ | _[Grundursache]_ | _[Maßnahme]_ | ☐ Offen / ✅ Geschlossen | ☐ Ja / ☐ Nein |
+    ---
 
-**Referenz:** [REF-13 CAPA-Protokoll](../improvement/capa-log.md)
+    ## Protokoll der Managementbewertung
 
-#### 3e. Interne Auditergebnisse
+    | Attribut | Detail |
+    |-----------|--------|
+    | **Datum** | TT.MM.JJJJ |
+    | **Uhrzeit** | HH:MM – HH:MM |
+    | **Ort** | _[Raum / Teams-Link]_ |
+    | **Teilnehmer** | _[Namen und Rollen]_ |
+    | **Abwesend** | _[Namen]_ |
+    | **Protokollführung** | _[Name]_ |
 
-| Audit-Nr. | Umfang | Datum | Schwere NK | Leichte NK | Beobachtungen | Status |
-|:-------:|-------|:----:|:---------:|:---------:|:------------:|:------:|
-| A-_[#]_ | _[Abschnitte]_ | _[Datum]_ | _[#]_ | _[#]_ | _[#]_ | _[Status]_ |
+    ---
 
-**Referenz:** [REF-11 Internes Auditprogramm](internal-audit-program.md)
+    ## Tagesordnung / Erforderliche Eingaben (ISO 9001:2015, Abschnitt 9.3.2)
 
-### 4. Angemessenheit der Ressourcen
+    ### 1. Status der Maßnahmen aus vorherigen Managementbewertungen
 
-| Ressourcenbereich | Aktueller Status | Identifizierte Lücke | Erforderliche Maßnahme |
-|--------------|:-------------:|:--------------:|-----------------|
-| Personal | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
-| Cloud-Infrastruktur | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
-| Werkzeuge / Lizenzen | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
-| Schulungsbudget | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
+    | Maßnahme-Nr. | Beschreibung | Verantwortlich | Fälligkeitsdatum | Status | Kommentare |
+    |:--------:|-------------|-------|:--------:|:------:|----------|
+    | MR-_[#]_ | _[Maßnahme]_ | _[Name]_ | _[Datum]_ | ☐ Offen / ✅ Geschlossen | |
+    | | | | | | |
 
-### 5. Überprüfung von Risiken und Chancen
+    ### 2. Änderungen bei externen und internen Themen
 
-| Top-Risiken (nach Bewertung) | Bewertung | Mitigationsstatus | Änderung seit letzter Überprüfung |
-|----------------------|:-----:|:-----------------:|:------------------------:|
-| _[Risiko aus REF-06]_ | _[#]_ | _[Status]_ | ↑↓→ |
-| | | | |
+    | Thema | Typ | Änderungsbeschreibung | Auswirkung auf QMS | Erforderliche Maßnahme |
+    |-------|------|-------------------|---------------|-----------------|
+    | _[Thema]_ | Intern / Extern | _[Was hat sich geändert]_ | _[Auswirkung]_ | _[Maßnahme]_ |
+    | | | | | |
 
-**Referenz:** [REF-06 Risikoregister](../planning/risk-register.md)
+    **Referenz:** [REF-01 Kontextanalyse](../qms-framework/context-analysis.md)
 
-### 6. Verbesserungsmöglichkeiten
+    ### 3. QMS-Leistung und -Wirksamkeit
 
-| # | Verbesserungsvorschlag | Quelle | Erwarteter Nutzen | Entscheidung |
-|---|---------------------|--------|------------------|----------|
-| 1 | _[Vorschlag]_ | _[Retro/Audit/Feedback]_ | _[Nutzen]_ | ☐ Genehmigt / ☐ Zurückgestellt / ☐ Abgelehnt |
-| | | | | |
+    #### 3a. Kundenzufriedenheit
 
----
+    | Kennzahl | Vorheriger Zeitraum | Aktueller Zeitraum | Ziel | Trend | Maßnahme |
+    |--------|:--------------:|:--------------:|:------:|:-----:|--------|
+    | NPS-Wert | _[#]_ | _[#]_ | ≥ 40 | ↑↓→ | |
+    | Lösungszeit für Support-Tickets | _[Stunden]_ | _[Stunden]_ | _[Ziel]_ | ↑↓→ | |
+    | Umsetzungsrate von Feature-Anfragen | _[%]_ | _[%]_ | _[Ziel]_ | ↑↓→ | |
 
-## Ergebnisse / Entscheidungen (ISO 9001:2015, Abschnitt 9.3.3)
+    #### 3b. Leistung der Qualitätsziele
 
-### Getroffene Entscheidungen
+    | Ziel | KPI | Vorher | Aktuell | Ziel | Status |
+    |-----------|-----|:--------:|:-------:|:------:|:------:|
+    | QO-1: Verfügbarkeit | Uptime % | _[%]_ | _[%]_ | ≥ 99,5% | 🟢🟡🔴 |
+    | QO-2: MTTR | Stunden | _[h]_ | _[h]_ | < 4h | 🟢🟡🔴 |
+    | QO-3: NPS | Wert | _[#]_ | _[#]_ | ≥ 40 | 🟢🟡🔴 |
+    | QO-4: Datenintegrität | Vorfälle | _[#]_ | _[#]_ | 0 | 🟢🟡🔴 |
+    | QO-5: Release-Qualität | Erfolgsrate | _[%]_ | _[%]_ | 100% | 🟢🟡🔴 |
+    | QO-6: Testabdeckung | Abdeckung % | _[%]_ | _[%]_ | ≥ 80% | 🟢🟡🔴 |
+    | QO-7: Schulung | Abschlussrate % | _[%]_ | _[%]_ | ≥ 90% | 🟢🟡🔴 |
 
-| # | Entscheidung | Verantwortlich | Fälligkeitsdatum |
-|---|----------|-------|:--------:|
-| D-_[#]_ | _[Entscheidung]_ | _[Name]_ | _[Datum]_ |
-| | | | |
+    **Referenz:** [REF-07 Qualitätsziele](../planning/quality-objectives.md)
 
-### Maßnahmen
+    #### 3c. Prozessleistung
 
-| # | Maßnahme | Verantwortlich | Fälligkeitsdatum | Priorität |
-|---|--------|-------|:--------:|:--------:|
-| MR-_[#]_ | _[Maßnahme]_ | _[Name]_ | _[Datum]_ | Hoch/Mittel/Niedrig |
-| | | | | |
+    | Prozess | Schlüsselkennzahl | Vorher | Aktuell | Trend | Problem / Maßnahme |
+    |---------|-----------|:--------:|:-------:|:-----:|---------------|
+    | Entwicklung | Sprint-Velocity | _[Pkt.]_ | _[Pkt.]_ | ↑↓→ | |
+    | Deployment | Deploy-Häufigkeit | _[/Woche]_ | _[/Woche]_ | ↑↓→ | |
+    | Deployment | Fehlerrate | _[%]_ | _[%]_ | ↑↓→ | |
+    | Betrieb | MTTR | _[h]_ | _[h]_ | ↑↓→ | |
+    | Betrieb | Anzahl Störungen | _[#]_ | _[#]_ | ↑↓→ | |
 
-### Ressourcenzuweisungen
+    #### 3d. Nichtkonformitäten und Korrekturmaßnahmen
 
-| Ressource | Zuweisungsentscheidung | Betrag/Detail |
-|----------|-------------------|---------------|
-| _[Ressource]_ | _[Entscheidung]_ | _[Detail]_ |
+    | CAPA-Nr. | Beschreibung | Grundursache | Ergriffene Maßnahme | Status | Wirksam? |
+    |:------:|-------------|------------|-------------|:------:|:----------:|
+    | CA-_[#]_ | _[Beschreibung]_ | _[Grundursache]_ | _[Maßnahme]_ | ☐ Offen / ✅ Geschlossen | ☐ Ja / ☐ Nein |
 
-### Änderungen am QMS
+    **Referenz:** [REF-13 CAPA-Protokoll](../improvement/capa-log.md)
 
-| Änderung | Grund | Wirksamkeitsdatum |
-|--------|--------|:--------------:|
-| _[Änderung]_ | _[Grund]_ | _[Datum]_ |
+    #### 3e. Interne Auditergebnisse
 
----
+    | Audit-Nr. | Umfang | Datum | Schwere NK | Leichte NK | Beobachtungen | Status |
+    |:-------:|-------|:----:|:---------:|:---------:|:------------:|:------:|
+    | A-_[#]_ | _[Abschnitte]_ | _[Datum]_ | _[#]_ | _[#]_ | _[#]_ | _[Status]_ |
 
-## Nächste Managementbewertung
+    **Referenz:** [REF-11 Internes Auditprogramm](internal-audit-program.md)
 
-| Datum | Schwerpunktbereiche |
-|------|------------|
-| _[Datum]_ | _[Besondere Schwerpunktbereiche für die nächste Bewertung]_ |
+    ### 4. Angemessenheit der Ressourcen
 
----
+    | Ressourcenbereich | Aktueller Status | Identifizierte Lücke | Erforderliche Maßnahme |
+    |--------------|:-------------:|:--------------:|-----------------|
+    | Personal | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
+    | Cloud-Infrastruktur | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
+    | Werkzeuge / Lizenzen | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
+    | Schulungsbudget | _[Status]_ | _[Lücke]_ | _[Maßnahme]_ |
 
-**Protokoll genehmigt durch:**
+    ### 5. Überprüfung von Risiken und Chancen
 
-_________________________
-[Name des Abteilungsleiters] — Datum: TT.MM.JJJJ
+    | Top-Risiken (nach Bewertung) | Bewertung | Mitigationsstatus | Änderung seit letzter Überprüfung |
+    |----------------------|:-----:|:-----------------:|:------------------------:|
+    | _[Risiko aus REF-06]_ | _[#]_ | _[Status]_ | ↑↓→ |
+    | | | | |
 
----
+    **Referenz:** [REF-06 Risikoregister](../planning/risk-register.md)
 
-*ISO 9001:2015 Referenz: Abschnitt 9.3*
+    ### 6. Verbesserungsmöglichkeiten
+
+    | # | Verbesserungsvorschlag | Quelle | Erwarteter Nutzen | Entscheidung |
+    |---|---------------------|--------|------------------|----------|
+    | 1 | _[Vorschlag]_ | _[Retro/Audit/Feedback]_ | _[Nutzen]_ | ☐ Genehmigt / ☐ Zurückgestellt / ☐ Abgelehnt |
+    | | | | | |
+
+    ---
+
+    ## Ergebnisse / Entscheidungen (ISO 9001:2015, Abschnitt 9.3.3)
+
+    ### Getroffene Entscheidungen
+
+    | # | Entscheidung | Verantwortlich | Fälligkeitsdatum |
+    |---|----------|-------|:--------:|
+    | D-_[#]_ | _[Entscheidung]_ | _[Name]_ | _[Datum]_ |
+    | | | | |
+
+    ### Maßnahmen
+
+    | # | Maßnahme | Verantwortlich | Fälligkeitsdatum | Priorität |
+    |---|--------|-------|:--------:|:--------:|
+    | MR-_[#]_ | _[Maßnahme]_ | _[Name]_ | _[Datum]_ | Hoch/Mittel/Niedrig |
+    | | | | | |
+
+    ### Ressourcenzuweisungen
+
+    | Ressource | Zuweisungsentscheidung | Betrag/Detail |
+    |----------|-------------------|---------------|
+    | _[Ressource]_ | _[Entscheidung]_ | _[Detail]_ |
+
+    ### Änderungen am QMS
+
+    | Änderung | Grund | Wirksamkeitsdatum |
+    |--------|--------|:--------------:|
+    | _[Änderung]_ | _[Grund]_ | _[Datum]_ |
+
+    ---
+
+    ## Nächste Managementbewertung
+
+    | Datum | Schwerpunktbereiche |
+    |------|------------|
+    | _[Datum]_ | _[Besondere Schwerpunktbereiche für die nächste Bewertung]_ |
+
+    ---
+
+    **Protokoll genehmigt durch:**
+
+    _________________________
+    [Name des Abteilungsleiters] — Datum: TT.MM.JJJJ
+
+    ---
+
+    *ISO 9001:2015 Referenz: Abschnitt 9.3*
