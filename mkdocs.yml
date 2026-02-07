@@ -1,8 +1,8 @@
 site_name: ISO 9001:2015 Audit Preparation
 site_description: Comprehensive audit preparation package for ISO 9001:2015 certification - DDD Unit (Data Driven Development | AD/ADAS Tooling)
-site_url: ""
-repo_url: https://github.com/yourusername/iso-9001
-repo_name: yourusername/iso-9001
+site_url: https://fwornle.github.io/iso-9001/
+repo_url: https://github.com/fwornle/iso-9001
+repo_name: fwornle/iso-9001
 
 docs_dir: docs
 
@@ -127,4 +127,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/iso-9001
+      link: https://github.com/fwornle/iso-9001
