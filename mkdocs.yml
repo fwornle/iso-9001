@@ -6,6 +6,9 @@ repo_name: fwornle/iso-9001
 
 docs_dir: docs
 
+hooks:
+  - hooks/sitemap_locales.py
+
 theme:
   name: material
   palette:
