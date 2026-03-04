@@ -1,6 +1,7 @@
 # MkDocs
 site/
 .cache/
+_S3/
 
 # Python
 *.py[cod]
