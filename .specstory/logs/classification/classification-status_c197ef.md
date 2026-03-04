@@ -1,16 +1,16 @@
 # Classification Status - iso-9001
 
-**Generated**: 2026-02-08T15:53:02.670Z
-**Total Sessions**: 8
-**Total Decisions**: 23
+**Generated**: 2026-02-08T16:42:54.708Z
+**Total Sessions**: 9
+**Total Decisions**: 33
 
 ---
 
 ## Overall Statistics
 
-- **Total Prompt Sets Classified**: 23
-- **Classified as CODING**: 16 (70%)
-- **Classified as LOCAL**: 7 (30%)
+- **Total Prompt Sets Classified**: 33
+- **Classified as CODING**: 26 (79%)
+- **Classified as LOCAL**: 7 (21%)
 
 ### Classification Method Distribution
 
@@ -19,12 +19,12 @@ Click on a classification method to view all sessions decided by that layer.
 | Layer | Method | Decisions | Percentage |
 |-------|--------|-----------|------------|
 | 0 | [Session Filter](#layer-0-session-filter) | 0 | 0% |
-| 1 | [Path Analysis](#layer-1-path-analysis) | 7 | 30% |
-| 2 | [Keyword Matching](#layer-2-keyword-matching) | 9 | 39% |
-| 3 | [Embedding Search](#layer-3-embedding-search) | 7 | 30% |
+| 1 | [Path Analysis](#layer-1-path-analysis) | 10 | 30% |
+| 2 | [Keyword Matching](#layer-2-keyword-matching) | 16 | 48% |
+| 3 | [Embedding Search](#layer-3-embedding-search) | 7 | 21% |
 | 4 | [Semantic Analysis](#layer-4-semantic-analysis) | 0 | 0% |
 
-**Average Processing Time**: 1007ms
+**Average Processing Time**: 702ms
 
 ---
 
@@ -44,7 +44,8 @@ Sessions grouped by the classification layer that made the final decision.
 - **[2026-02-07_0900-1000_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-07_0900-1000_c197ef_from-iso-9001.md)** - 2 coding decisions
 - **[2026-02-07_1100-1200_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-07_1100-1200_c197ef_from-iso-9001.md)** - 1 coding decisions
 - **[2026-02-07_1400-1500_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-07_1400-1500_c197ef_from-iso-9001.md)** - 1 coding decisions
-- **[2026-02-08_1600-1700_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md)** - 1 coding decisions
+- **[2026-02-08_1600-1700_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md)** - 3 coding decisions
+- **[2026-02-08_1700-1800_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md)** - 1 coding decisions
 
 ### Layer 2: Keyword Matching
 
@@ -54,7 +55,8 @@ Sessions grouped by the classification layer that made the final decision.
 - **[2026-02-07_1500-1600_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-07_1500-1600_c197ef_from-iso-9001.md)** - 1 coding decisions
 - **[2026-02-08_1200-1300_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1200-1300_c197ef_from-iso-9001.md)** - 5 coding decisions
 - **[2026-02-08_1500-1600_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1500-1600_c197ef_from-iso-9001.md)** - 1 coding decisions
-- **[2026-02-08_1600-1700_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md)** - 1 coding decisions
+- **[2026-02-08_1600-1700_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md)** - 3 coding decisions
+- **[2026-02-08_1700-1800_c197ef](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md)** - 5 coding decisions
 
 ### Layer 3: Embedding Search
 
@@ -81,7 +83,8 @@ Complete chronological list of all classification sessions.
 - **2026-02-07_1500-1600_c197ef** - 1 decisions ([CODING: 1](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-07_1500-1600_c197ef_from-iso-9001.md))
 - **2026-02-08_1200-1300_c197ef** - 5 decisions ([CODING: 5](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1200-1300_c197ef_from-iso-9001.md))
 - **2026-02-08_1500-1600_c197ef** - 1 decisions ([CODING: 1](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1500-1600_c197ef_from-iso-9001.md))
-- **2026-02-08_1600-1700_c197ef** - 6 decisions ([CODING: 2](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md), [LOCAL: 4](2026-02-08_1600-1700_c197ef.md))
+- **2026-02-08_1600-1700_c197ef** - 10 decisions ([CODING: 6](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md), [LOCAL: 4](2026-02-08_1600-1700_c197ef.md))
+- **2026-02-08_1700-1800_c197ef** - 6 decisions ([CODING: 6](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md))
 
 ---
 
@@ -149,10 +152,14 @@ Individual prompt sets with clickable links to their classification details.
 
 ### 2026-02-08_1600-1700_c197ef
 
-#### CODING Decisions (2)
+#### CODING Decisions (6)
 
 - [ps_1770564571007](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770564571007) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770564571007)) - Layer path
 - [ps_1770564571007](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770564571007) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770564571007)) - Layer keyword
+- [ps_1770564590787](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770564590787) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770564590787)) - Layer path
+- [ps_1770564590787](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770564590787) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770564590787)) - Layer keyword
+- [ps_1770566057609](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770566057609) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770566057609)) - Layer keyword
+- [ps_1770566057609](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1600-1700_c197ef_from-iso-9001.md#ps_1770566057609) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1600-1700_c197ef_from-iso-9001.md#prompt-set-ps_1770566057609)) - Layer path
 
 #### LOCAL Decisions (4)
 
@@ -160,6 +167,17 @@ Individual prompt sets with clickable links to their classification details.
 - [ps_1770564366353](../../../history/2026-02-08_1600-1700_c197ef.md#ps_1770564366353) ([classification](2026-02-08_1600-1700_c197ef.md#prompt-set-ps_1770564366353)) - Layer embedding
 - [ps_1770564401673](../../../history/2026-02-08_1600-1700_c197ef.md#ps_1770564401673) ([classification](2026-02-08_1600-1700_c197ef.md#prompt-set-ps_1770564401673)) - Layer embedding
 - [ps_1770564401673](../../../history/2026-02-08_1600-1700_c197ef.md#ps_1770564401673) ([classification](2026-02-08_1600-1700_c197ef.md#prompt-set-ps_1770564401673)) - Layer embedding
+
+### 2026-02-08_1700-1800_c197ef
+
+#### CODING Decisions (6)
+
+- [ps_1770566637904](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770566637904) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770566637904)) - Layer keyword
+- [ps_1770566637904](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770566637904) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770566637904)) - Layer path
+- [ps_1770567193230](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770567193230) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770567193230)) - Layer keyword
+- [ps_1770567193230](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770567193230) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770567193230)) - Layer keyword
+- [ps_1770567193230](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770567193230) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770567193230)) - Layer keyword
+- [ps_1770567728115](file:///Users/Q284340/Agentic/coding/.specstory/history/2026-02-08_1700-1800_c197ef_from-iso-9001.md#ps_1770567728115) ([classification](file:///Users/Q284340/Agentic/coding/.specstory/logs/classification/2026-02-08_1700-1800_c197ef_from-iso-9001.md#prompt-set-ps_1770567728115)) - Layer keyword
 
 
 ---
