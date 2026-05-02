@@ -59,3 +59,6 @@ env/
 !.data/knowledge-export/
 !.data/knowledge-config.json
 .venv/
+
+# Private history repo — chat logs live in a separate <name>-history repo
+.specstory/history/
